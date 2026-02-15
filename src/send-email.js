@@ -1,9 +1,9 @@
 /**
- * Sends a weekly HTML email digest of top matched shows.
+ * Sends a weekly HTML email digest of top matched shows via Resend.
  */
 const fs = require('fs');
 const path = require('path');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 const config = require('./config');
 const log = require('./utils/logger');
 
@@ -95,41 +95,33 @@ function escapeHtml(str) {
 }
 
 async function sendDigest(matches) {
-  if (!config.email.user || !config.email.pass) {
-    log.warn('Email not configured — skipping send. Set EMAIL_USER and EMAIL_PASS in .env');
-    // Save the HTML to output/ instead
-    const html = buildHTML(matches || loadMatches());
-    const outPath = path.join(config.outputDir, 'digest.html');
-    fs.mkdirSync(config.outputDir, { recursive: true });
-    fs.writeFileSync(outPath, html);
-    log.ok(`Email preview saved to ${outPath}`);
-    return;
-  }
-
   const data = matches || loadMatches();
   const html = buildHTML(data);
 
-  // Save preview
+  // Always save a preview
   const outPath = path.join(config.outputDir, 'digest.html');
   fs.mkdirSync(config.outputDir, { recursive: true });
   fs.writeFileSync(outPath, html);
 
-  const transporter = nodemailer.createTransport({
-    host: config.email.host,
-    port: config.email.port,
-    secure: config.email.port === 465,
-    auth: {
-      user: config.email.user,
-      pass: config.email.pass,
-    },
-  });
+  if (!config.email.resendApiKey) {
+    log.warn('Resend API key not configured — skipping send. Set RESEND_API_KEY in .env');
+    log.ok(`Email preview saved to ${outPath}`);
+    return;
+  }
 
-  await transporter.sendMail({
-    from: `"Showfinder" <${config.email.user}>`,
+  const resend = new Resend(config.email.resendApiKey);
+  const strongMatches = data.filter((m) => m.score >= 80).length;
+
+  const { error } = await resend.emails.send({
+    from: config.email.from,
     to: config.email.to,
-    subject: `Showfinder — ${data.filter((m) => m.score >= 80).length} great matches this week`,
+    subject: `Showfinder — ${strongMatches} great matches this week`,
     html,
   });
+
+  if (error) {
+    throw new Error(`Resend error: ${error.message}`);
+  }
 
   log.ok(`Email sent to ${config.email.to}`);
 }

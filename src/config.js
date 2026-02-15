@@ -17,11 +17,9 @@ module.exports = {
   },
 
   email: {
-    host: process.env.EMAIL_HOST || 'smtp.gmail.com',
-    port: parseInt(process.env.EMAIL_PORT || '587', 10),
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    resendApiKey: process.env.RESEND_API_KEY,
     to: process.env.EMAIL_TO,
+    from: process.env.EMAIL_FROM || 'Showfinder <onboarding@resend.dev>',
     topN: parseInt(process.env.EMAIL_TOP_N || '10', 10),
   },
 
