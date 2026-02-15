@@ -4,7 +4,7 @@ const log = require('../../utils/logger');
 
 async function scrape(venue) {
   try {
-    const html = await fetchHTML('https://nublu.net/events');
+    const html = await fetchHTML('https://nublu.net/program');
     const $ = cheerio.load(html);
     const events = [];
 

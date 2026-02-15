@@ -15,6 +15,45 @@ const { scrapeAllVenues } = require('./scrapers');
 const { scoreAllShows } = require('./matcher');
 const { sendDigest } = require('./send-email');
 
+/**
+ * Normalize scraped date/time fields into clean formats for the dashboard.
+ */
+function normalizeMatch(match) {
+  const m = { ...match };
+
+  // --- Normalize date to YYYY-MM-DD ---
+  if (m.date) {
+    let ds = m.date.replace(/\s+/g, ' ').trim();
+    // Remove ordinal suffixes (1st, 2nd, 3rd, 4th, etc.)
+    ds = ds.replace(/(\d+)(st|nd|rd|th)\b/gi, '$1');
+    // Remove embedded time at end of date string (e.g., "Feb 18th, 2026 6:30")
+    ds = ds.replace(/\s+\d{1,2}:\d{2}\s*$/, '').trim();
+    // Fix stuck day+month like "WednesdayFeb" -> "Wednesday Feb"
+    ds = ds.replace(/(monday|tuesday|wednesday|thursday|friday|saturday|sunday)(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/gi, '$1 $2');
+    // Add current year if missing
+    if (!/\d{4}/.test(ds)) ds += ', 2026';
+    const parsed = new Date(ds);
+    if (!isNaN(parsed)) {
+      m.date = parsed.toISOString().split('T')[0];
+    }
+  }
+
+  // --- Normalize time to "H:MM PM" ---
+  if (m.time) {
+    let ts = m.time.replace(/\s+/g, ' ').trim();
+    // Prefer "Show:" time over "Doors:" time
+    const showMatch = ts.match(/Show:\s*(\d{1,2}:\d{2}\s*(AM|PM)?)/i);
+    const doorsMatch = ts.match(/Doors:\s*(\d{1,2}:\d{2}\s*(AM|PM)?)/i);
+    if (showMatch) ts = showMatch[1].trim();
+    else if (doorsMatch) ts = doorsMatch[1].trim();
+    // Ensure space before AM/PM
+    ts = ts.replace(/(\d)(AM|PM)/gi, '$1 $2');
+    m.time = ts.toUpperCase();
+  }
+
+  return m;
+}
+
 async function run() {
   const dryRun = process.argv.includes('--dry-run');
   const skipEmail = process.argv.includes('--no-email');
@@ -70,7 +109,7 @@ async function run() {
   fs.mkdirSync(docsDir, { recursive: true });
   const dashboardData = {
     updatedAt: new Date().toISOString(),
-    matches,
+    matches: matches.map(normalizeMatch),
     profile: {
       topArtists: (profile.topArtists || []).slice(0, 10),
       topGenres: (profile.topGenres || []).slice(0, 10),

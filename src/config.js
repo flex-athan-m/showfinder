@@ -24,15 +24,15 @@ module.exports = {
   },
 
   venues: [
-    { name: 'Brooklyn Paramount', slug: 'brooklyn-paramount', neighborhood: 'Downtown Brooklyn', url: 'https://www.brooklynparamount.com', bandsintownId: 'Brooklyn Paramount' },
-    { name: 'Brooklyn Steel', slug: 'brooklyn-steel', neighborhood: 'Williamsburg', url: 'https://www.bfrpresents.com/venues/brooklyn-steel', bandsintownId: 'Brooklyn Steel' },
+    { name: 'Brooklyn Paramount', slug: 'brooklyn-paramount', neighborhood: 'Downtown Brooklyn', url: 'https://www.brooklynparamount.com/shows', bandsintownId: 'Brooklyn Paramount' },
+    { name: 'Brooklyn Steel', slug: 'brooklyn-steel', neighborhood: 'Williamsburg', url: 'https://www.brooklynsteel.com', bandsintownId: 'Brooklyn Steel' },
     { name: 'Music Hall of Williamsburg', slug: 'music-hall-of-williamsburg', neighborhood: 'Williamsburg', url: 'https://www.musichallofwilliamsburg.com', bandsintownId: 'Music Hall of Williamsburg' },
     { name: 'Brooklyn Bowl', slug: 'brooklyn-bowl', neighborhood: 'Williamsburg', url: 'https://www.brooklynbowl.com/events', bandsintownId: 'Brooklyn Bowl Brooklyn' },
-    { name: 'Warsaw', slug: 'warsaw', neighborhood: 'Greenpoint', url: 'https://www.warsawconcerts.com', bandsintownId: 'Warsaw' },
+    { name: 'Warsaw', slug: 'warsaw', neighborhood: 'Greenpoint', url: 'https://www.warsawconcerts.com/shows', bandsintownId: 'Warsaw' },
     { name: 'Sony Hall', slug: 'sony-hall', neighborhood: 'Midtown', url: 'https://www.sonyhall.com', bandsintownId: 'Sony Hall' },
     { name: 'Webster Hall', slug: 'webster-hall', neighborhood: 'East Village', url: 'https://www.websterhall.com', bandsintownId: 'Webster Hall' },
     { name: 'Le Poisson Rouge', slug: 'le-poisson-rouge', neighborhood: 'Greenwich Village', url: 'https://lpr.com', bandsintownId: 'Le Poisson Rouge' },
     { name: 'National Sawdust', slug: 'national-sawdust', neighborhood: 'Williamsburg', url: 'https://nationalsawdust.org', bandsintownId: 'National Sawdust' },
-    { name: 'Nublu', slug: 'nublu', neighborhood: 'East Village', url: 'https://nublu.net', bandsintownId: 'Nublu' },
+    { name: 'Nublu', slug: 'nublu', neighborhood: 'East Village', url: 'https://nublu.net/program', bandsintownId: 'Nublu' },
   ],
 };

@@ -4,32 +4,58 @@ const log = require('../../utils/logger');
 
 async function scrape(venue) {
   try {
-    const html = await fetchHTML('https://www.brooklynparamount.com/events');
+    const html = await fetchHTML('https://www.brooklynparamount.com/shows');
     const $ = cheerio.load(html);
     const events = [];
 
-    // Brooklyn Paramount uses a common event listing pattern
-    $('.eventItem, .event-item, [class*="EventItem"], .event-listing .event, article').each((_, el) => {
+    // Try JSON-LD structured data first (Schema.org MusicEvent)
+    $('script[type="application/ld+json"]').each((_, el) => {
+      try {
+        const data = JSON.parse($(el).html());
+        const items = Array.isArray(data) ? data : [data];
+        for (const item of items) {
+          if (item['@type'] !== 'MusicEvent') continue;
+          const artist = item.name || '';
+          const startDate = item.startDate || '';
+          const ticketUrl = item.url || '';
+          if (artist) {
+            events.push({
+              artist,
+              date: startDate ? startDate.split('T')[0] : '',
+              time: startDate && startDate.includes('T')
+                ? formatTime(startDate)
+                : '',
+              price: '',
+              ticketUrl,
+              venue: venue.name,
+              source: 'scrape',
+            });
+          }
+        }
+      } catch {
+        // Skip malformed JSON-LD blocks
+      }
+    });
+
+    if (events.length > 0) return events;
+
+    // Fallback: DOM scraping
+    $('.eventItem, .event-item, [class*="EventItem"], .event-listing .event, article, [class*="event"]').each((_, el) => {
       const $el = $(el);
       const artist =
-        $el.find('.eventItem-title, .event-title, h2, h3, .title, .headliner').first().text().trim();
-      const dateRaw =
-        $el.find('.eventItem-date, .event-date, time, [datetime], .date').first();
+        $el.find('.eventItem-title, .event-title, h2, h3, .title, .headliner, [class*="name"]').first().text().trim();
+      const dateRaw = $el.find('.eventItem-date, .event-date, time, [datetime], .date').first();
       const date = dateRaw.attr('datetime') || dateRaw.text().trim();
-      const time =
-        $el.find('.eventItem-time, .event-time, .time, .doors').first().text().trim();
-      const price =
-        $el.find('.eventItem-price, .price').first().text().trim();
       const ticketUrl =
         $el.find('a[href*="ticket"], a[href*="event"]').attr('href') ||
         $el.find('a').attr('href') || '';
 
-      if (artist && artist.length > 1) {
+      if (artist && artist.length > 1 && artist.length < 200) {
         events.push({
           artist,
           date: normalizeDate(date),
-          time,
-          price,
+          time: '',
+          price: '',
           ticketUrl: ticketUrl.startsWith('http') ? ticketUrl : `https://www.brooklynparamount.com${ticketUrl}`,
           venue: venue.name,
           source: 'scrape',
@@ -42,6 +68,14 @@ async function scrape(venue) {
     log.warn(`Brooklyn Paramount scrape failed: ${err.message}`);
     return null;
   }
+}
+
+function formatTime(isoString) {
+  try {
+    const d = new Date(isoString);
+    if (isNaN(d)) return '';
+    return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  } catch { return ''; }
 }
 
 function normalizeDate(raw) {

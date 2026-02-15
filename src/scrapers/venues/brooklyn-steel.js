@@ -4,32 +4,58 @@ const log = require('../../utils/logger');
 
 async function scrape(venue) {
   try {
-    const html = await fetchHTML('https://www.bfrpresents.com/venues/brooklyn-steel');
+    const html = await fetchHTML('https://www.brooklynsteel.com/shows');
     const $ = cheerio.load(html);
     const events = [];
 
-    // BFR Presents / Brooklyn Steel pattern
-    $('.event-card, .event-item, .show, .eventWrapper, [class*="event"]').each((_, el) => {
+    // Try JSON-LD structured data first (Schema.org MusicEvent)
+    $('script[type="application/ld+json"]').each((_, el) => {
+      try {
+        const data = JSON.parse($(el).html());
+        const items = Array.isArray(data) ? data : [data];
+        for (const item of items) {
+          if (item['@type'] !== 'MusicEvent') continue;
+          const artist = item.name || '';
+          const startDate = item.startDate || '';
+          const ticketUrl = item.url || '';
+          if (artist) {
+            events.push({
+              artist,
+              date: startDate ? startDate.split('T')[0] : '',
+              time: startDate && startDate.includes('T')
+                ? formatTime(startDate)
+                : '',
+              price: '',
+              ticketUrl,
+              venue: venue.name,
+              source: 'scrape',
+            });
+          }
+        }
+      } catch {
+        // Skip malformed JSON-LD blocks
+      }
+    });
+
+    if (events.length > 0) return events;
+
+    // Fallback: DOM scraping
+    $('[class*="event"], article, .show-card, a[href*="/shows/"]').each((_, el) => {
       const $el = $(el);
       const artist =
-        $el.find('.event-name, .artist-name, h3, h2, .title, .headliner').first().text().trim();
-      const dateRaw =
-        $el.find('.event-date, .date, time, [datetime]').first();
-      const date = dateRaw.attr('datetime') || dateRaw.text().trim();
-      const time =
-        $el.find('.event-time, .time, .doors').first().text().trim();
-      const price =
-        $el.find('.price, .event-price').first().text().trim();
+        $el.find('.event-name, .artist-name, h3, h2, .title, .headliner, [class*="name"]').first().text().trim();
+      const dateEl = $el.find('.event-date, .date, time, [datetime]').first();
+      const date = dateEl.attr('datetime') || dateEl.text().trim();
       const ticketUrl =
         $el.find('a[href*="ticket"]').attr('href') ||
         $el.find('a').attr('href') || '';
 
-      if (artist && artist.length > 1) {
+      if (artist && artist.length > 1 && artist.length < 200) {
         events.push({
           artist,
           date: normalizeDate(date),
-          time,
-          price,
+          time: '',
+          price: '',
           ticketUrl: resolveUrl(ticketUrl),
           venue: venue.name,
           source: 'scrape',
@@ -42,6 +68,14 @@ async function scrape(venue) {
     log.warn(`Brooklyn Steel scrape failed: ${err.message}`);
     return null;
   }
+}
+
+function formatTime(isoString) {
+  try {
+    const d = new Date(isoString);
+    if (isNaN(d)) return '';
+    return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  } catch { return ''; }
 }
 
 function normalizeDate(raw) {
@@ -58,7 +92,7 @@ function normalizeDate(raw) {
 function resolveUrl(href) {
   if (!href) return '';
   if (href.startsWith('http')) return href;
-  return `https://www.bfrpresents.com${href}`;
+  return `https://www.brooklynsteel.com${href}`;
 }
 
 module.exports = { scrape };

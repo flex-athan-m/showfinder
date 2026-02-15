@@ -347,17 +347,20 @@ function getFiltered() {
   if (state.venueFilter !== 'all') shows = shows.filter(s => s.venue === state.venueFilter);
   if (state.minScore > 0) shows = shows.filter(s => s.score >= state.minScore);
 
-  if (state.sortBy === 'match') shows.sort((a, b) => b.score - a.score);
-  else if (state.sortBy === 'date') {
+  if (state.sortBy === 'match') {
+    shows.sort((a, b) => b.score - a.score);
+  } else if (state.sortBy === 'date') {
     shows.sort((a, b) => {
-      const da = new Date(a.date || '2099-01-01');
-      const db = new Date(b.date || '2099-01-01');
-      return da - db;
+      const da = new Date(a.date || '');
+      const db = new Date(b.date || '');
+      const ta = isNaN(da) ? Infinity : da.getTime();
+      const tb = isNaN(db) ? Infinity : db.getTime();
+      return ta - tb;
     });
   } else if (state.sortBy === 'price') {
     shows.sort((a, b) => {
-      const pa = parseInt((a.price || '$999').replace(/[^0-9]/g, '')) || 999;
-      const pb = parseInt((b.price || '$999').replace(/[^0-9]/g, '')) || 999;
+      const pa = parseInt((a.price || '').replace(/[^0-9]/g, '')) || Infinity;
+      const pb = parseInt((b.price || '').replace(/[^0-9]/g, '')) || Infinity;
       return pa - pb;
     });
   }
