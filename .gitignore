@@ -1,0 +1,6 @@
+node_modules/
+.env
+data/spotify-profile.json
+data/shows.json
+data/matches.json
+output/
