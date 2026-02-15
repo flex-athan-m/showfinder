@@ -6,6 +6,7 @@ const path = require('path');
 const SpotifyWebApi = require('spotify-web-api-node');
 const config = require('./config');
 const log = require('./utils/logger');
+const { getArtistTags } = require('./utils/lastfm');
 
 function getApi() {
   return new SpotifyWebApi({
@@ -65,22 +66,24 @@ async function fetchProfile() {
 
   let allArtists = Array.from(artistMap.values());
 
-  // Hydrate genres via getArtists (batch endpoint, max 50 per call)
-  // The top artists endpoint sometimes returns empty genres
-  const artistIds = allArtists.map((a) => a.id);
-  for (let i = 0; i < artistIds.length; i += 50) {
-    const batch = artistIds.slice(i, i + 50);
-    try {
-      const details = await api.getArtists(batch);
-      for (const artist of details.body.artists) {
-        if (!artist) continue;
-        const existing = artistMap.get(artist.id);
-        if (existing && artist.genres?.length > 0) {
-          existing.genres = artist.genres;
+  // Hydrate genres via Last.fm for artists with empty genres
+  // (Spotify's API blocks genre data for dev-mode apps)
+  const needsGenres = allArtists.filter((a) => !a.genres || a.genres.length === 0);
+  log.info(`Hydrating genres via Last.fm for ${needsGenres.length} artists...`);
+  for (let i = 0; i < needsGenres.length; i += 5) {
+    const batch = needsGenres.slice(i, i + 5);
+    await Promise.all(
+      batch.map(async (artist) => {
+        const tags = await getArtistTags(artist.name);
+        if (tags.length > 0) {
+          const existing = artistMap.get(artist.id);
+          if (existing) existing.genres = tags;
         }
-      }
-    } catch (err) {
-      log.warn(`Failed to hydrate genres for batch ${i}: ${err.message}`);
+      })
+    );
+    // Respect Last.fm rate limits
+    if (i + 5 < needsGenres.length) {
+      await new Promise((r) => setTimeout(r, 200));
     }
   }
   allArtists = Array.from(artistMap.values());

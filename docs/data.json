@@ -1,63 +1,812 @@
 {
-  "updatedAt": "2026-02-15T21:00:00.000Z",
+  "updatedAt": "2026-02-15T21:47:07.829Z",
   "matches": [
-    { "artist": "Khruangbin", "venue": "Brooklyn Paramount", "date": "2026-03-14", "time": "8:00 PM", "price": "$65", "ticketUrl": "#", "score": 97, "matchReason": "In your top artists", "spotifyGenres": ["psychedelic soul", "funk", "global"], "source": "sample" },
-    { "artist": "Floating Points", "venue": "Brooklyn Steel", "date": "2026-03-08", "time": "9:00 PM", "price": "$45", "ticketUrl": "#", "score": 91, "matchReason": "Genre match: electronic + ambient", "spotifyGenres": ["electronic", "ambient", "experimental"], "source": "sample" },
-    { "artist": "Arooj Aftab", "venue": "National Sawdust", "date": "2026-02-28", "time": "7:30 PM", "price": "$35", "ticketUrl": "#", "score": 88, "matchReason": "Similar to artists you like", "spotifyGenres": ["neo-sufi", "jazz", "ambient"], "source": "sample" },
-    { "artist": "Magdalena Bay", "venue": "Webster Hall", "date": "2026-03-22", "time": "8:00 PM", "price": "$40", "ticketUrl": "#", "score": 85, "matchReason": "Genre match: synth-pop + indie", "spotifyGenres": ["synth-pop", "electropop", "indie"], "source": "sample" },
-    { "artist": "Mdou Moctar", "venue": "Music Hall of Williamsburg", "date": "2026-03-05", "time": "9:00 PM", "price": "$30", "ticketUrl": "#", "score": 82, "matchReason": "Similar to Khruangbin, Bombino", "spotifyGenres": ["tuareg guitar", "rock", "psychedelic"], "source": "sample" },
-    { "artist": "Nala Sinephro", "venue": "Le Poisson Rouge", "date": "2026-03-18", "time": "8:30 PM", "price": "$28", "ticketUrl": "#", "score": 80, "matchReason": "Genre match: jazz + ambient", "spotifyGenres": ["jazz", "ambient", "electronic"], "source": "sample" },
-    { "artist": "bar italia", "venue": "Brooklyn Steel", "date": "2026-04-02", "time": "8:00 PM", "price": "$35", "ticketUrl": "#", "score": 76, "matchReason": "Genre match: indie rock", "spotifyGenres": ["post-punk", "indie rock", "noise pop"], "source": "sample" },
-    { "artist": "Saba", "venue": "Brooklyn Paramount", "date": "2026-03-29", "time": "8:00 PM", "price": "$50", "ticketUrl": "#", "score": 74, "matchReason": "Genre match: hip-hop", "spotifyGenres": ["hip-hop", "conscious rap", "jazz rap"], "source": "sample" },
-    { "artist": "Yves Tumor", "venue": "Brooklyn Steel", "date": "2026-04-18", "time": "9:00 PM", "price": "$40", "ticketUrl": "#", "score": 73, "matchReason": "Genre match: experimental", "spotifyGenres": ["experimental rock", "glam", "noise pop"], "source": "sample" },
-    { "artist": "Eyedress", "venue": "Warsaw", "date": "2026-03-12", "time": "9:00 PM", "price": "$25", "ticketUrl": "#", "score": 71, "matchReason": "Similar to Beach House, Diiv", "spotifyGenres": ["dream pop", "shoegaze", "lo-fi"], "source": "sample" },
-    { "artist": "Portico Quartet", "venue": "Nublu", "date": "2026-04-10", "time": "10:00 PM", "price": "$20", "ticketUrl": "#", "score": 69, "matchReason": "Genre overlap: jazz + electronic", "spotifyGenres": ["jazz", "electronic", "ambient"], "source": "sample" },
-    { "artist": "JPEGMAFIA", "venue": "Webster Hall", "date": "2026-04-05", "time": "8:00 PM", "price": "$45", "ticketUrl": "#", "score": 67, "matchReason": "Experimental overlap", "spotifyGenres": ["experimental hip-hop", "noise", "glitch"], "source": "sample" },
-    { "artist": "KOKOKO!", "venue": "Brooklyn Bowl", "date": "2026-03-20", "time": "9:00 PM", "price": "$22", "ticketUrl": "#", "score": 64, "matchReason": "Discovery pick: global + electronic", "spotifyGenres": ["afro-electronic", "punk", "experimental"], "source": "sample" },
-    { "artist": "Brittany Howard", "venue": "Sony Hall", "date": "2026-04-15", "time": "8:00 PM", "price": "$55", "ticketUrl": "#", "score": 62, "matchReason": "Genre match: soul + rock", "spotifyGenres": ["soul", "rock", "R&B"], "source": "sample" },
-    { "artist": "Irreversible Entanglements", "venue": "National Sawdust", "date": "2026-04-08", "time": "7:30 PM", "price": "$25", "ticketUrl": "#", "score": 58, "matchReason": "Discovery pick: experimental jazz", "spotifyGenres": ["free jazz", "spoken word", "avant-garde"], "source": "sample" }
+    {
+      "artist": "Son Little",
+      "date": "Thu, June 25, 2026\n           ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/events/1326869/son-little-tickets?skin=mhow",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 84,
+      "matchReason": "Related to your artist: leon bridges",
+      "spotifyArtistId": "4lujUKeO6nQAJXpq37Epn7",
+      "spotifyGenres": [
+        "r&b",
+        "r&b/soul",
+        "blues",
+        "indie",
+        "indie rock"
+      ]
+    },
+    {
+      "artist": "Marissa Nadler",
+      "date": "Wed February 18th, 2026\n\t\t6:30",
+      "time": "6:30PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/marissa25nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 84,
+      "matchReason": "Related to your artist: m. ward",
+      "spotifyArtistId": "099toTcKJoywTosZr2hHjy",
+      "spotifyGenres": [
+        "indie folk",
+        "psychedelic folk",
+        "folk",
+        "contemporary folk",
+        "dream pop",
+        "singer-songwriter",
+        "chamber folk"
+      ]
+    },
+    {
+      "artist": "Kenny Mason",
+      "date": "Mon, June 22, 2026\n           ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/events/1330895/kenny-mason-tickets?skin=mhow",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 79,
+      "matchReason": "Strong genre match: trap, hip hop, alternative hip hop",
+      "spotifyArtistId": "6U3ybJ9UHNKEdsH7ktGBZ7",
+      "spotifyGenres": [
+        "trap",
+        "hip hop",
+        "alternative hip hop"
+      ]
+    },
+    {
+      "artist": "The Strumbellas",
+      "date": "Thu February 19th, 2026\n\t\t7:00",
+      "time": "7:00PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/strumbellas25nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 79,
+      "matchReason": "Strong genre match: rock, indie rock, pop rock",
+      "spotifyArtistId": "3lDpdwM8KILepMHqBWUhIA",
+      "spotifyGenres": [
+        "rock",
+        "indie rock",
+        "folk rock",
+        "pop rock",
+        "alt-country",
+        "country",
+        "father",
+        "canadian",
+        "hunter",
+        "strumbellas"
+      ]
+    },
+    {
+      "artist": "Ritt Momney",
+      "date": "Sun, April 19, 2026\n          ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/artists/1107649/ritt-momney-tickets",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 76,
+      "matchReason": "Genre match: indie rock, english",
+      "spotifyArtistId": "0tMnuEXTeJeHbslcV8OybJ",
+      "spotifyGenres": [
+        "indie rock",
+        "english",
+        "indie pop"
+      ]
+    },
+    {
+      "artist": "Bikini Kill",
+      "date": "Thu, September 24, 2026\n      ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/events/1304793/bikini-kill-tickets?skin=mhow",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 68,
+      "matchReason": "Genre match: rock",
+      "spotifyArtistId": "2n6FviARgtjjimZXu18uRM",
+      "spotifyGenres": [
+        "punk rock",
+        "riot grrrl",
+        "rock",
+        "punk",
+        "american",
+        "usa",
+        "female vocals"
+      ]
+    },
+    {
+      "artist": "Jams",
+      "date": "Sat February 21st, 2026\n\t\t11:0",
+      "time": "11:00PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/jams0226nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 68,
+      "matchReason": "Genre match: hip hop",
+      "spotifyArtistId": "53KwLdlmrlCelAZMaLVZqU",
+      "spotifyGenres": [
+        "hip hop",
+        "chillwave",
+        "lo-fi hip hop",
+        "boom bap",
+        "lo-fi",
+        "instrumental",
+        "instrumental hip hop",
+        "downtempo"
+      ]
+    },
+    {
+      "artist": "Gary Bartz",
+      "date": "Thu February 26th, 2026\n\t\t7:00",
+      "time": "7:00PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/gb25nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 68,
+      "matchReason": "Genre match: jazz",
+      "spotifyArtistId": "5ArqvMflDEhxdqW8sBBQUQ",
+      "spotifyGenres": [
+        "jazz",
+        "free funk",
+        "modern creative",
+        "american",
+        "post bop",
+        "jazz and blues",
+        "hard bop",
+        "soul jazz"
+      ]
+    },
+    {
+      "artist": "The Blackbyrds w/ special guest Ray Angry+ opening set by Yola",
+      "date": "WednesdayFeb 18",
+      "time": "6:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketweb.com/event/the-blackbyrds-w-special-guest-sony-hall-tickets/13974984?pl=sonyhall&REFID=260218site",
+      "venue": "Sony Hall",
+      "source": "scrape",
+      "score": 55,
+      "matchReason": "Fuzzy genre overlap: jazz fusion, contemporary jazz",
+      "spotifyArtistId": "7uykqYYhDUugFJgKZWXIWq",
+      "spotifyGenres": [
+        "jazz fusion",
+        "jazz-funk",
+        "contemporary jazz",
+        "classic pop and rock"
+      ]
+    },
+    {
+      "artist": "MUNA: Dancing On the Wall Album Release",
+      "date": "Sat, May 16, 2026\n            ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/events/1327045/muna-dancing-on-the-wall-album-release-tickets?skin=mhow",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "6xdRb2GypJ7DqnWAI2mHGn",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "MUNA: Dancing On the Wall Album Release",
+      "date": "Sun, May 17, 2026\n            ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/events/1327378/muna-dancing-on-the-wall-album-release-tickets?skin=mhow",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "6xdRb2GypJ7DqnWAI2mHGn",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "MUNA: Dancing On the Wall Album Release",
+      "date": "Mon, May 18, 2026\n            ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/events/1327382/muna-dancing-on-the-wall-album-release-tickets?skin=mhow",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "6xdRb2GypJ7DqnWAI2mHGn",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Teen Suicide Cloud Nothings, University",
+      "date": "Fri, May 22, 2026\n            ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/events/1316463/teen-suicide-tickets?skin=mhow",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "2cAvReLDmjFQtCJFDJbHBU",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Pete Yorn solo acoustic - 25th Anniversary of musicforthemorningafter",
+      "date": "Sun, June 07, 2026\n           ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/events/1317660/pete-yorn-solo-acoustic-25th-anniversary-of-musicforthemorningafter-tickets?skin=mhow",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5l2EAkfckNPYZbEDbQtEkO",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "DeVotchKa performs Little Miss Sunshine",
+      "date": "Fri, September 11, 2026\n      ",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.axs.com/events/1312906/devotchka-performs-little-miss-sunshine-tickets?skin=mhow",
+      "venue": "Music Hall of Williamsburg",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "6rlVhQqS15yJMO4DZqrq6I",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Club 90s Presents Heated RivalRave",
+      "date": "Sun Feb 15th",
+      "time": "Doors: 7:15 PM             /  \n\t\t\t\t        \t\n        \tShow:  8:15 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/club-90s-presents-heated-rivalrave-nashville-tennessee-02-15-2026/event/1B00642CE0DDCF98",
+      "venue": "Brooklyn Bowl",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "4q3ewBCX7sLwd24euuV69X",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Open For Bowling!",
+      "date": "Wed Feb 18th",
+      "time": "Doors: 6:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.brooklynbowl.com/brooklyn/events/detail/olympics-watch-party-open-for-bowling-1",
+      "venue": "Brooklyn Bowl",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "0K1q0nXQ8is36PzOKAMbNe",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "honestav",
+      "date": "Wed Feb 18th",
+      "time": "Doors: 7:00 PM             /  \n\t\t\t\t        \t\n        \tShow:  8:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/honestav-nashville-tennessee-02-18-2026/event/1B00638FD6DCCD92",
+      "venue": "Brooklyn Bowl",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5LvRazQ7EDZLfQU4HYc6XF",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Bowlin' With The Homies",
+      "date": "Thu Feb 19th",
+      "time": "Doors: 6:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.brooklynbowl.com/philadelphia/events/detail/bowlinwiththehomies-38",
+      "venue": "Brooklyn Bowl",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5ND0mGcL9SKSjWIjPd0xIb",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Dead Bowl: Bushwick's Dead",
+      "date": "Thu Feb 19th",
+      "time": "Doors: 6:00 PM             /  \n\t\t\t\t        \t\n        \tShow:  8:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/dead-bowl-bushwicks-dead-brooklyn-new-york-02-19-2026/event/0000643BEFBAF5FF",
+      "venue": "Brooklyn Bowl",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "4RjtLUZNqLtMpRKIOaVokc",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Monster Energy Outbreak Presents: Joey Valence & Brae",
+      "date": "Thu Feb 19th",
+      "time": "Doors: 7:00 PM             /  \n\t\t\t\t        \t\n        \tShow:  8:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/monster-energy-outbreak-presents-joey-valence-nashville-tennessee-02-19-2026/event/1B006367D19BD412",
+      "venue": "Brooklyn Bowl",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "1q4618qKswelCGLoanFKQh",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Hot In Herre: 2000s Dance Party",
+      "date": "Fri Feb 20th",
+      "time": "Doors: 6:00 PM             /  \n\t\t\t\t        \t\n        \tShow:  8:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/hot-in-herre-2000s-dance-party-brooklyn-new-york-02-20-2026/event/000062ECB14B4574",
+      "venue": "Brooklyn Bowl",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "2gBjLmx6zQnFGQJCAQpRgw",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "VIP Bowling Lane Add On - Hot in Herre",
+      "date": "Fri Feb 20th",
+      "time": "Show:  8:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/vip-bowling-lane-add-on-hot-brooklyn-new-york-02-20-2026/event/0000642FD8B3DC7E",
+      "venue": "Brooklyn Bowl",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5X8Tt3rIpdy8VR78KEhZ6C",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Runway 7 Fashion Present New York Fashion Week",
+      "date": "SundayFeb 15",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.ticketweb.com/event/runway-7-fashion-present-new-sony-hall-tickets/13985924?pl=sonyhall&REFID=260215site",
+      "venue": "Sony Hall",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "3gacryguGmpmCvgPGt2CBI",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "All You Need Is GeorgeAn All-Star Celebration of George Harrison ft. Jackie Greene, Steve Kimock, Pete Lavezzoli, Reed Mathis, Berry Duane Oakley & Gi",
+      "date": "ThursdayFeb 19",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.ticketweb.com/event/all-you-need-is-george-sony-hall-tickets/14605653?pl=sonyhall&REFID=260219site",
+      "venue": "Sony Hall",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "7FIoB5PHdrMZVC3q2HE5MS",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "((( O )))",
+      "date": "SaturdayFeb 21",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.ticketweb.com/event/-o-sony-hall-tickets/14704963?pl=sonyhall&REFID=260221site",
+      "venue": "Sony Hall",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5rBFU1rhgs1nNghopuj9k8",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "The Jazz Room: A Journey to the Heart of New Orleans",
+      "date": "SundayFeb 22",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://sonyhall.com/shows/?eid=TWL1011550",
+      "venue": "Sony Hall",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "320TrJub4arztwXRm7kqVO",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Skeleton Crewe ft. Rob Barraco, Barry Sless, Stephen Inglis, Pete Sears & Jay Lane",
+      "date": "TuesdayFeb 24",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.ticketweb.com/event/skeleton-crewe-ft-rob-barraco-sony-hall-tickets/13969204?pl=sonyhall&REFID=260224site",
+      "venue": "Sony Hall",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "0g7IuTR6aeOuIMFHTeka7t",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Drink The Sea",
+      "date": "Fri February 20th, 2026\n\t\t7:00",
+      "time": "7:00PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/dts26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "1WGb8nCPGJA0RyriSDIQfC",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Gimme Gimme Disco",
+      "date": "Fri February 20th, 2026\n\t\t11:0",
+      "time": "11:00PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/ggd9849/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "6vYg01ZFt1nREsUDMDPUYX",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Florist",
+      "date": "Sat February 21st, 2026\n\t\t6:30",
+      "time": "6:30PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/florist26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "00x1fYSGhdqScXBRpSj3DW",
+      "spotifyGenres": [
+        "the epoch collective"
+      ]
+    },
+    {
+      "artist": "Labiahead (all women Radiohead)",
+      "date": "Wed February 25th, 2026\n\t\t6:30",
+      "time": "6:30PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/creep26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "2zEGZaYnEVjERT8iFHfArc",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Emo Night Brooklyn",
+      "date": "Fri February 27th, 2026\n\t\t11:0",
+      "time": "11:00PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/enb9858/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "57Ssjwp93IK7DekBrNHvtQ",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Stephen Kellogg and The Homecoming",
+      "date": "Fri February 27th, 2026\n\t\t6:00",
+      "time": "6:00PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/sk26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "794GTZkztMS29PO7cTOnmY",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Matinee Social Club: 90s vs 00s",
+      "date": "Sat February 28th, 2026\n\t\t5:00",
+      "time": "5:00PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/msc0226nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "2c8JocB8eI6cCGaF5xGoT1",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Eric Hutchinson",
+      "date": "Thu March 5th, 2026\n\t\t7:00PM",
+      "time": "7:00PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/eh26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "39x8gyJjTHiBQklFgVJSV4",
+      "spotifyGenres": []
+    }
   ],
   "profile": {
     "topArtists": [
-      { "name": "Say She She", "genres": ["indie soul", "psychedelic soul"] },
-      { "name": "Chance the Rapper", "genres": ["hip-hop", "conscious rap"] },
-      { "name": "LION BABE", "genres": ["alternative r&b", "indie soul"] },
-      { "name": "Kid Cudi", "genres": ["hip-hop", "psychedelic hip-hop"] },
-      { "name": "Teddy Swims", "genres": ["pop soul", "r&b"] },
-      { "name": "Ravyn Lenae", "genres": ["alternative r&b", "indie soul"] },
-      { "name": "Billy Strings", "genres": ["jam band", "bluegrass"] },
-      { "name": "Cautious Clay", "genres": ["alternative r&b", "indie soul"] },
-      { "name": "The Black Keys", "genres": ["blues rock", "indie rock"] },
-      { "name": "When Chai Met Toast", "genres": ["indian indie", "indie folk"] }
+      {
+        "id": "1WGb8nCPGJA0RyriSDIQfC",
+        "name": "Say She She",
+        "genres": [
+          "soul",
+          "funk",
+          "disco",
+          "r&b"
+        ],
+        "url": "https://open.spotify.com/artist/1WGb8nCPGJA0RyriSDIQfC",
+        "mediumRank": 1,
+        "longRank": 5
+      },
+      {
+        "id": "1anyVhU62p31KFi8MEzkbf",
+        "name": "Chance the Rapper",
+        "genres": [
+          "hip hop",
+          "rap",
+          "pop rap",
+          "english",
+          "alternative hip hop",
+          "r&b",
+          "conscious hip hop",
+          "chicago rap",
+          "trap",
+          "jazz rap"
+        ],
+        "url": "https://open.spotify.com/artist/1anyVhU62p31KFi8MEzkbf",
+        "mediumRank": 2,
+        "longRank": 1
+      },
+      {
+        "id": "4VA3EAvncrTucjTmrvd4GE",
+        "name": "LION BABE",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/4VA3EAvncrTucjTmrvd4GE",
+        "mediumRank": 3,
+        "longRank": 13
+      },
+      {
+        "id": "0fA0VVWsXO9YnASrzqfmYu",
+        "name": "Kid Cudi",
+        "genres": [
+          "hip hop",
+          "alternative hip hop",
+          "pop rap",
+          "trap",
+          "midwestern hip hop",
+          "rap",
+          "hiphop",
+          "us"
+        ],
+        "url": "https://open.spotify.com/artist/0fA0VVWsXO9YnASrzqfmYu",
+        "mediumRank": 4,
+        "longRank": 24
+      },
+      {
+        "id": "33qOK5uJ8AR2xuQQAhHump",
+        "name": "Teddy Swims",
+        "genres": [
+          "pop",
+          "soul",
+          "pop soul",
+          "rock",
+          "alternative rock",
+          "rhythm & blues",
+          "country"
+        ],
+        "url": "https://open.spotify.com/artist/33qOK5uJ8AR2xuQQAhHump",
+        "mediumRank": 5,
+        "longRank": 23
+      },
+      {
+        "id": "5RTLRtXjbXI2lSXc6jxlAz",
+        "name": "Ravyn Lenae",
+        "genres": [
+          "pop",
+          "neo soul",
+          "r&b",
+          "contemporary r&b",
+          "alternative r&b",
+          "singer-songwriter",
+          "2020s"
+        ],
+        "url": "https://open.spotify.com/artist/5RTLRtXjbXI2lSXc6jxlAz",
+        "mediumRank": 6,
+        "longRank": 9
+      },
+      {
+        "id": "1ZN1c1qWEGZNX1pGeKCPpf",
+        "name": "Billy Strings",
+        "genres": [
+          "bluegrass",
+          "jam band",
+          "progressive bluegrass"
+        ],
+        "url": "https://open.spotify.com/artist/1ZN1c1qWEGZNX1pGeKCPpf",
+        "mediumRank": 7,
+        "longRank": 38
+      },
+      {
+        "id": "6iWuBN32BqCJAeXW6o3nil",
+        "name": "Cautious Clay",
+        "genres": [
+          "bedroom pop",
+          "alternative r&b"
+        ],
+        "url": "https://open.spotify.com/artist/6iWuBN32BqCJAeXW6o3nil",
+        "mediumRank": 8,
+        "longRank": 17
+      },
+      {
+        "id": "7mnBLXK823vNxN3UWB7Gfz",
+        "name": "The Black Keys",
+        "genres": [
+          "blues rock",
+          "rock",
+          "blues",
+          "garage rock",
+          "alternative rock",
+          "indie rock",
+          "garage rock revival",
+          "rock and indie",
+          "indie",
+          "punk blues"
+        ],
+        "url": "https://open.spotify.com/artist/7mnBLXK823vNxN3UWB7Gfz",
+        "mediumRank": 9,
+        "longRank": 6
+      },
+      {
+        "id": "04hYGGSjYtLekuuJXEGrIl",
+        "name": "When Chai Met Toast",
+        "genres": [
+          "hindie",
+          "indie india",
+          "indian folk"
+        ],
+        "url": "https://open.spotify.com/artist/04hYGGSjYtLekuuJXEGrIl",
+        "mediumRank": 10,
+        "longRank": 7
+      }
     ],
     "topGenres": [
-      { "genre": "alternative r&b", "count": 6 },
-      { "genre": "indie soul", "count": 4 },
-      { "genre": "classic rock", "count": 4 },
-      { "genre": "pop soul", "count": 3 },
-      { "genre": "retro soul", "count": 2 },
-      { "genre": "jam band", "count": 2 },
-      { "genre": "blues rock", "count": 2 },
-      { "genre": "modern blues", "count": 2 }
+      {
+        "genre": "hip hop",
+        "count": 8
+      },
+      {
+        "genre": "pop",
+        "count": 8
+      },
+      {
+        "genre": "rock",
+        "count": 8
+      },
+      {
+        "genre": "soul",
+        "count": 6
+      },
+      {
+        "genre": "r&b",
+        "count": 6
+      },
+      {
+        "genre": "pop rap",
+        "count": 6
+      },
+      {
+        "genre": "english",
+        "count": 5
+      },
+      {
+        "genre": "contemporary r&b",
+        "count": 5
+      },
+      {
+        "genre": "pop rock",
+        "count": 5
+      },
+      {
+        "genre": "rap",
+        "count": 4
+      }
     ],
     "recentArtists": [
-      { "name": "Tyla" },
-      { "name": "Steve Aoki" },
-      { "name": "Dermot Kennedy" },
-      { "name": "Kygo" },
-      { "name": "Duke Dumont" }
+      {
+        "id": "6xdRb2GypJ7DqnWAI2mHGn",
+        "name": "MUNA"
+      },
+      {
+        "id": "1r1uxoy19fzMxunt3ONAkG",
+        "name": "Phoebe Bridgers"
+      },
+      {
+        "id": "3SozjO3Lat463tQICI9LcE",
+        "name": "Tyla"
+      },
+      {
+        "id": "77AiFEVeAVj2ORpC85QVJs",
+        "name": "Steve Aoki"
+      },
+      {
+        "id": "4bL2B6hmLlMWnUEZnorEtG",
+        "name": "Felix Jaehn"
+      },
+      {
+        "id": "6prmLEyn4LfHlD9NnXWlf7",
+        "name": "Adam Lambert"
+      },
+      {
+        "id": "7f5Zgnp2spUuuzKplmRkt7",
+        "name": "Lost Frequencies"
+      },
+      {
+        "id": "1bZDq4po4dMIpN74Zendm0",
+        "name": "Janieck"
+      },
+      {
+        "id": "0xRXCcSX89eobfrshSVdyu",
+        "name": "MEDUZA"
+      },
+      {
+        "id": "5KNNVgR6LBIABRIomyCwKJ",
+        "name": "Dermot Kennedy"
+      }
     ]
   },
   "venues": [
-    { "name": "Brooklyn Paramount", "neighborhood": "Downtown Brooklyn" },
-    { "name": "Brooklyn Steel", "neighborhood": "Williamsburg" },
-    { "name": "Music Hall of Williamsburg", "neighborhood": "Williamsburg" },
-    { "name": "Brooklyn Bowl", "neighborhood": "Williamsburg" },
-    { "name": "Warsaw", "neighborhood": "Greenpoint" },
-    { "name": "Sony Hall", "neighborhood": "Midtown" },
-    { "name": "Webster Hall", "neighborhood": "East Village" },
-    { "name": "Le Poisson Rouge", "neighborhood": "Greenwich Village" },
-    { "name": "National Sawdust", "neighborhood": "Williamsburg" },
-    { "name": "Nublu", "neighborhood": "East Village" }
+    {
+      "name": "Brooklyn Paramount",
+      "neighborhood": "Downtown Brooklyn"
+    },
+    {
+      "name": "Brooklyn Steel",
+      "neighborhood": "Williamsburg"
+    },
+    {
+      "name": "Music Hall of Williamsburg",
+      "neighborhood": "Williamsburg"
+    },
+    {
+      "name": "Brooklyn Bowl",
+      "neighborhood": "Williamsburg"
+    },
+    {
+      "name": "Warsaw",
+      "neighborhood": "Greenpoint"
+    },
+    {
+      "name": "Sony Hall",
+      "neighborhood": "Midtown"
+    },
+    {
+      "name": "Webster Hall",
+      "neighborhood": "East Village"
+    },
+    {
+      "name": "Le Poisson Rouge",
+      "neighborhood": "Greenwich Village"
+    },
+    {
+      "name": "National Sawdust",
+      "neighborhood": "Williamsburg"
+    },
+    {
+      "name": "Nublu",
+      "neighborhood": "East Village"
+    }
   ]
 }

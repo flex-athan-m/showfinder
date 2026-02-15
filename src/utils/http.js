@@ -15,7 +15,10 @@ async function fetchHTML(url) {
 }
 
 async function fetchJSON(url, params = {}) {
-  const { data } = await client.get(url, { params });
+  const { data } = await client.get(url, {
+    params,
+    headers: { Accept: 'application/json' },
+  });
   return data;
 }
 

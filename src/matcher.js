@@ -11,6 +11,7 @@
 const SpotifyWebApi = require('spotify-web-api-node');
 const config = require('./config');
 const log = require('./utils/logger');
+const { getArtistTags, getSimilarArtists } = require('./utils/lastfm');
 
 // Cache for Spotify API lookups to avoid repeated calls
 const artistCache = new Map();
@@ -90,13 +91,14 @@ async function scoreShow(show, profile, api) {
   }
 
   // 3. Look up artist on Spotify for genre/related artist matching
+  //    Uses Last.fm for genres and similar artists (Spotify blocks these in dev mode)
   let spotifyArtist = null;
-  let relatedArtists = [];
+  let relatedNames = [];
 
   if (artistCache.has(artistLower)) {
     const cached = artistCache.get(artistLower);
     spotifyArtist = cached.artist;
-    relatedArtists = cached.related;
+    relatedNames = cached.relatedNames;
   } else {
     try {
       const searchResult = await api.searchArtists(cleanName, { limit: 1 });
@@ -106,24 +108,25 @@ async function scoreShow(show, profile, api) {
         result.spotifyArtistId = spotifyArtist.id;
         result.spotifyGenres = spotifyArtist.genres || [];
 
-        // Fetch related artists
-        try {
-          const relatedResult = await api.getArtistRelatedArtists(spotifyArtist.id);
-          relatedArtists = relatedResult.body.artists || [];
-        } catch {
-          // Related artists call can fail for obscure artists
+        // If Spotify returned empty genres, hydrate from Last.fm
+        if (!result.spotifyGenres.length) {
+          const tags = await getArtistTags(cleanName);
+          result.spotifyGenres = tags;
+          spotifyArtist.genres = tags;
         }
+
+        // Fetch similar artists from Last.fm instead of Spotify
+        relatedNames = await getSimilarArtists(cleanName);
       }
-      artistCache.set(artistLower, { artist: spotifyArtist, related: relatedArtists });
+      artistCache.set(artistLower, { artist: spotifyArtist, relatedNames });
     } catch {
       // Search failed — can't score further
-      artistCache.set(artistLower, { artist: null, related: [] });
+      artistCache.set(artistLower, { artist: null, relatedNames: [] });
     }
   }
 
-  // 4. Related artist overlap
-  if (relatedArtists.length > 0) {
-    const relatedNames = relatedArtists.map((a) => a.name.toLowerCase());
+  // 4. Related artist overlap (relatedNames are already lowercased from Last.fm)
+  if (relatedNames.length > 0) {
     const myArtistNames = new Set(profile.artistNames);
     const overlapping = relatedNames.filter((name) => myArtistNames.has(name));
 
