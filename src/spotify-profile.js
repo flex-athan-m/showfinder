@@ -63,7 +63,27 @@ async function fetchProfile() {
     }
   });
 
-  const allArtists = Array.from(artistMap.values());
+  let allArtists = Array.from(artistMap.values());
+
+  // Hydrate genres via getArtists (batch endpoint, max 50 per call)
+  // The top artists endpoint sometimes returns empty genres
+  const artistIds = allArtists.map((a) => a.id);
+  for (let i = 0; i < artistIds.length; i += 50) {
+    const batch = artistIds.slice(i, i + 50);
+    try {
+      const details = await api.getArtists(batch);
+      for (const artist of details.body.artists) {
+        if (!artist) continue;
+        const existing = artistMap.get(artist.id);
+        if (existing && artist.genres?.length > 0) {
+          existing.genres = artist.genres;
+        }
+      }
+    } catch (err) {
+      log.warn(`Failed to hydrate genres for batch ${i}: ${err.message}`);
+    }
+  }
+  allArtists = Array.from(artistMap.values());
 
   // Extract genre frequency
   const genreCounts = {};

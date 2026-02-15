@@ -25,10 +25,30 @@ function getApi() {
 }
 
 /**
+ * Extract the core artist name from a scraped event title.
+ * Strips tour names, "presents:", featured guests, etc.
+ */
+function extractArtistName(raw) {
+  let name = raw;
+
+  // Strip everything after common delimiters that indicate non-artist info
+  name = name.replace(/\s*[-–—:]\s*(an all[- ]star|album release|performs?|presents?|tour|live|solo acoustic|ft\.?|feat\.?|w\/|with special).*/i, '');
+  // Strip "w/ ..." or "feat. ..." at the end
+  name = name.replace(/\s+(w\/|feat\.?|ft\.?|with)\s+.*/i, '');
+  // Strip parenthetical descriptions
+  name = name.replace(/\s*\(.*?\)\s*/g, ' ');
+  // Strip leading "presents:" style prefixes
+  name = name.replace(/^.*?presents?:?\s+/i, '');
+
+  return name.trim();
+}
+
+/**
  * Score a single show against the user's Spotify profile.
  */
 async function scoreShow(show, profile, api) {
-  const artistLower = show.artist.toLowerCase().trim();
+  const cleanName = extractArtistName(show.artist);
+  const artistLower = cleanName.toLowerCase().trim();
   const result = {
     ...show,
     score: 0,
@@ -37,9 +57,12 @@ async function scoreShow(show, profile, api) {
     spotifyGenres: [],
   };
 
-  // 1. Direct match against top artists
+  // 1. Direct match against top artists (try both raw and cleaned name)
   const directMatch = profile.topArtists.find(
-    (a) => a.name.toLowerCase() === artistLower
+    (a) => {
+      const pLower = a.name.toLowerCase();
+      return pLower === artistLower || pLower === show.artist.toLowerCase().trim();
+    }
   );
   if (directMatch) {
     const rank = directMatch.mediumRank || directMatch.longRank || 50;
@@ -54,7 +77,10 @@ async function scoreShow(show, profile, api) {
 
   // 2. Check recently played
   const recentMatch = profile.recentArtists.find(
-    (a) => a.name.toLowerCase() === artistLower
+    (a) => {
+      const pLower = a.name.toLowerCase();
+      return pLower === artistLower || pLower === show.artist.toLowerCase().trim();
+    }
   );
   if (recentMatch) {
     result.score = 90;
@@ -73,7 +99,7 @@ async function scoreShow(show, profile, api) {
     relatedArtists = cached.related;
   } else {
     try {
-      const searchResult = await api.searchArtists(show.artist, { limit: 1 });
+      const searchResult = await api.searchArtists(cleanName, { limit: 1 });
       const items = searchResult.body.artists?.items;
       if (items && items.length > 0) {
         spotifyArtist = items[0];
@@ -131,8 +157,10 @@ async function scoreShow(show, profile, api) {
   }
 
   // 6. Partial name match (substring matching for featured artists, side projects, etc.)
+  // Also check against multi-artist show titles (e.g., "Teen Suicide Cloud Nothings, University")
+  const showWords = show.artist.toLowerCase();
   const partialMatch = profile.artistNames.find(
-    (name) => artistLower.includes(name) || name.includes(artistLower)
+    (name) => artistLower.includes(name) || name.includes(artistLower) || showWords.includes(name)
   );
   if (partialMatch) {
     result.score = 55;

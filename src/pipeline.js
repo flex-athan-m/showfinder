@@ -65,6 +65,22 @@ async function run() {
   fs.writeFileSync(matchesPath, JSON.stringify(matches, null, 2));
   log.ok(`Saved ${matches.length} scored matches to data/matches.json`);
 
+  // Step 3b: Generate dashboard data (docs/data.json)
+  const docsDir = path.join(__dirname, '..', 'docs');
+  fs.mkdirSync(docsDir, { recursive: true });
+  const dashboardData = {
+    updatedAt: new Date().toISOString(),
+    matches,
+    profile: {
+      topArtists: (profile.topArtists || []).slice(0, 10),
+      topGenres: (profile.topGenres || []).slice(0, 10),
+      recentArtists: (profile.recentArtists || []).slice(0, 10),
+    },
+    venues: config.venues.map(v => ({ name: v.name, neighborhood: v.neighborhood })),
+  };
+  fs.writeFileSync(path.join(docsDir, 'data.json'), JSON.stringify(dashboardData, null, 2));
+  log.ok('Dashboard data saved to docs/data.json');
+
   // Step 4: Email digest
   if (!skipEmail && !dryRun) {
     log.info('Step 4/4: Sending email digest...');

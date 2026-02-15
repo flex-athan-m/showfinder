@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>showfinder</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0a0a0b;
+      color: #e8e8e8;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; }
+
+    /* Header */
+    .header {
+      padding: 40px 32px 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .header-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+    .header-brand span.icon { font-size: 28px; }
+    .header-brand h1 {
+      font-size: 28px; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #f5f5f5, #a0a0a0);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .header-sub { font-size: 14px; color: rgba(255,255,255,0.4); font-weight: 500; }
+
+    /* Top Pick */
+    .top-pick {
+      margin-top: 20px; padding: 16px 20px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .top-pick-label {
+      font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .top-pick-title { font-size: 16px; font-weight: 700; color: #f0f0f0; margin-top: 4px; }
+    .top-pick-meta { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+    .top-pick-btn {
+      padding: 8px 16px; border-radius: 8px; color: #fff;
+      font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+    .top-pick-btn:hover { opacity: 0.85; }
+
+    /* Controls */
+    .controls {
+      padding: 18px 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.015);
+    }
+    .controls-inner {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+    }
+    .controls-left, .controls-right { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+    select {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px; padding: 7px 12px; color: #ccc; font-size: 13px;
+      font-family: inherit; cursor: pointer; outline: none;
+      transition: border-color 0.2s;
+    }
+    select:hover { border-color: rgba(255,255,255,0.2); }
+    select option { background: #1a1a1a; color: #ccc; }
+
+    .chip-group { display: flex; gap: 4px; }
+    .chip {
+      padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.08); background: transparent;
+      color: rgba(255,255,255,0.4); cursor: pointer;
+      font-family: 'JetBrains Mono', monospace; transition: all 0.15s;
+    }
+    .chip:hover { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); }
+    .chip.active {
+      border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.1); color: #fff;
+    }
+
+    .toggle-btn {
+      padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 500;
+      border: 1px solid rgba(255,255,255,0.08); background: transparent;
+      color: rgba(255,255,255,0.4); cursor: pointer; text-transform: capitalize;
+      transition: all 0.15s;
+    }
+    .toggle-btn:hover { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); }
+    .toggle-btn.active {
+      border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: #fff;
+    }
+    .toggle-btn.profile-btn {
+      border-color: rgba(29,185,84,0.3); color: #1DB954;
+    }
+    .toggle-btn.profile-btn.active {
+      background: rgba(29,185,84,0.15); border-color: rgba(29,185,84,0.4);
+    }
+
+    /* Spotify Profile */
+    .spotify-profile {
+      background: rgba(255,255,255,0.03); border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.06); padding: 18px 22px;
+      margin-bottom: 24px; display: none;
+    }
+    .spotify-profile.visible { display: block; }
+    .spotify-profile-header {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+    }
+    .spotify-dot { width: 10px; height: 10px; border-radius: 50%; background: #1DB954; }
+    .spotify-profile-label {
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .spotify-section-label {
+      font-size: 12px; color: rgba(255,255,255,0.35); font-weight: 500; margin-bottom: 6px;
+    }
+    .spotify-genre-pill {
+      display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 11px;
+      font-weight: 500; background: rgba(29,185,84,0.12); color: #1DB954;
+      border: 1px solid rgba(29,185,84,0.2); margin: 0 5px 5px 0;
+    }
+    .spotify-artists { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 14px; }
+
+    /* Content */
+    .content { padding: 24px 32px 60px; }
+
+    /* Legend */
+    .legend {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 20px; flex-wrap: wrap; gap: 8px;
+    }
+    .legend-count { font-size: 13px; color: rgba(255,255,255,0.35); font-weight: 500; }
+    .legend-dots { display: flex; gap: 12px; }
+    .legend-dot {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 11px; color: rgba(255,255,255,0.3);
+    }
+    .legend-dot span {
+      width: 8px; height: 8px; border-radius: 50%; display: inline-block;
+    }
+
+    /* Card grid */
+    .shows-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .shows-compact { display: flex; flex-direction: column; gap: 6px; }
+
+    /* Show Card */
+    .show-card {
+      background: rgba(255,255,255,0.03); border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.06); overflow: hidden;
+      transition: all 0.25s ease; cursor: pointer;
+    }
+    .show-card:hover {
+      transform: translateY(-2px); border-color: rgba(255,255,255,0.15);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .show-card-bar { height: 6px; }
+    .show-card-body { padding: 20px 22px; }
+    .show-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .show-card-artist { font-size: 20px; font-weight: 700; color: #f5f5f5; letter-spacing: -0.02em; }
+    .show-card-venue { font-size: 13px; color: rgba(255,255,255,0.45); font-weight: 500; margin-top: 4px; }
+
+    /* Score circle */
+    .score-circle {
+      width: 48px; height: 48px; border-radius: 50%; border-width: 3px; border-style: solid;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .score-circle span {
+      font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
+    }
+
+    /* Genre pills */
+    .genre-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .genre-pill {
+      padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 500;
+      background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* Match reason */
+    .match-reason {
+      display: flex; align-items: center; gap: 6px; margin-bottom: 16px;
+      padding: 8px 12px; border-radius: 8px;
+    }
+    .match-reason span { font-size: 12px; font-weight: 500; }
+
+    /* Card footer */
+    .show-card-footer { display: flex; justify-content: space-between; align-items: center; }
+    .show-card-date { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 500; display: flex; align-items: center; gap: 8px; }
+    .date-badge {
+      padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600;
+      background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5);
+    }
+    .show-card-price {
+      font-size: 15px; font-weight: 700; color: #f0f0f0;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Compact row */
+    .compact-row {
+      display: flex; align-items: center; gap: 16px; padding: 14px 18px;
+      background: rgba(255,255,255,0.03); border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06); transition: all 0.2s ease; cursor: pointer;
+    }
+    .compact-row:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12); }
+    .compact-color { width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0; }
+    .compact-info { flex: 1; min-width: 0; }
+    .compact-top { display: flex; align-items: center; gap: 8px; }
+    .compact-artist { font-weight: 600; font-size: 15px; color: #f0f0f0; }
+    .compact-sep { font-size: 12px; color: rgba(255,255,255,0.4); }
+    .compact-venue { font-size: 13px; color: rgba(255,255,255,0.5); }
+    .compact-meta { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+    .compact-score { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; }
+
+    /* Empty state */
+    .empty { text-align: center; padding: 60px 20px; }
+    .empty h3 { font-size: 18px; color: rgba(255,255,255,0.3); font-weight: 500; }
+    .empty p { font-size: 14px; color: rgba(255,255,255,0.2); margin-top: 8px; }
+
+    /* Loading */
+    .loading { text-align: center; padding: 80px 20px; color: rgba(255,255,255,0.3); font-size: 14px; }
+
+    /* Last updated */
+    .updated { text-align: center; padding: 20px; font-size: 11px; color: rgba(255,255,255,0.15); }
+
+    @media (max-width: 640px) {
+      .header, .controls, .content { padding-left: 16px; padding-right: 16px; }
+      .controls-inner { flex-direction: column; align-items: stretch; }
+      .controls-right { justify-content: flex-start; }
+      .legend { flex-direction: column; align-items: flex-start; }
+      .top-pick { flex-direction: column; align-items: flex-start; }
+      .show-card-artist { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <div class="header-brand">
+        <span class="icon">🎤</span>
+        <h1>showfinder</h1>
+      </div>
+      <p class="header-sub">Upcoming shows at your venues, ranked by your Spotify taste</p>
+      <div id="top-pick"></div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="container">
+      <div class="controls-inner">
+        <div class="controls-left">
+          <select id="venue-filter">
+            <option value="all">All Venues</option>
+          </select>
+          <select id="sort-by">
+            <option value="match">Sort: Best Match</option>
+            <option value="date">Sort: Soonest</option>
+            <option value="price">Sort: Cheapest</option>
+          </select>
+          <div class="chip-group" id="score-chips"></div>
+        </div>
+        <div class="controls-right">
+          <button class="toggle-btn profile-btn" id="profile-toggle">Show Profile</button>
+          <button class="toggle-btn active" data-view="cards">Cards</button>
+          <button class="toggle-btn" data-view="compact">Compact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <div class="container">
+      <div id="spotify-profile" class="spotify-profile"></div>
+      <div class="legend" id="legend"></div>
+      <div id="shows-container"></div>
+      <div class="updated" id="updated"></div>
+    </div>
+  </div>
+
+<script>
+// --- State ---
+let state = {
+  shows: [],
+  profile: null,
+  venues: [],
+  venueFilter: 'all',
+  sortBy: 'match',
+  minScore: 0,
+  view: 'cards',
+  showProfile: false,
+};
+
+// --- Config ---
+const SCORE_THRESHOLDS = [
+  { val: 0, label: 'All' },
+  { val: 60, label: '60+' },
+  { val: 75, label: '75+' },
+  { val: 90, label: '90+' },
+];
+
+// --- Utils ---
+function getMatchColor(score) {
+  if (score >= 90) return '#22c55e';
+  if (score >= 75) return '#eab308';
+  if (score >= 60) return '#f97316';
+  return '#94a3b8';
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return { label: '', badge: null };
+  try {
+    const date = new Date(dateStr + 'T12:00:00');
+    if (isNaN(date)) return { label: dateStr, badge: null };
+    const now = new Date();
+    const diff = Math.ceil((date - now) / (1000 * 60 * 60 * 24));
+    const label = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+    if (diff <= 0) return { label, badge: 'Today' };
+    if (diff <= 7) return { label, badge: diff + 'd away' };
+    if (diff <= 14) return { label, badge: 'Next week' };
+    return { label, badge: null };
+  } catch {
+    return { label: dateStr, badge: null };
+  }
+}
+
+function esc(s) {
+  if (!s) return '';
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function getVenue(name) {
+  return state.venues.find(v => v.name === name) || { name, neighborhood: '' };
+}
+
+// --- Render ---
+function getFiltered() {
+  let shows = state.shows.filter(s => s.score > 0);
+  if (state.venueFilter !== 'all') shows = shows.filter(s => s.venue === state.venueFilter);
+  if (state.minScore > 0) shows = shows.filter(s => s.score >= state.minScore);
+
+  if (state.sortBy === 'match') shows.sort((a, b) => b.score - a.score);
+  else if (state.sortBy === 'date') {
+    shows.sort((a, b) => {
+      const da = new Date(a.date || '2099-01-01');
+      const db = new Date(b.date || '2099-01-01');
+      return da - db;
+    });
+  } else if (state.sortBy === 'price') {
+    shows.sort((a, b) => {
+      const pa = parseInt((a.price || '$999').replace(/[^0-9]/g, '')) || 999;
+      const pb = parseInt((b.price || '$999').replace(/[^0-9]/g, '')) || 999;
+      return pa - pb;
+    });
+  }
+  return shows;
+}
+
+function renderTopPick() {
+  const el = document.getElementById('top-pick');
+  const allScored = state.shows.filter(s => s.score > 0).sort((a, b) => b.score - a.score);
+  if (allScored.length === 0) { el.innerHTML = ''; return; }
+
+  const top = allScored[0];
+  const color = getMatchColor(top.score);
+  const venue = getVenue(top.venue);
+  const dateInfo = formatDate(top.date);
+
+  el.innerHTML = `
+    <div class="top-pick" style="background:linear-gradient(135deg, ${color}15, ${color}08); border:1px solid ${color}30;">
+      <div>
+        <div class="top-pick-label" style="color:${color};">🔥 Top Pick for You</div>
+        <div class="top-pick-title">${esc(top.artist)} at ${esc(venue.name)}</div>
+        <div class="top-pick-meta">${esc(dateInfo.label)}${top.price ? ' · ' + esc(top.price) : ''}</div>
+      </div>
+      ${top.ticketUrl ? `<a href="${esc(top.ticketUrl)}" target="_blank" class="top-pick-btn" style="background:${color};">Get Tickets</a>` : ''}
+    </div>`;
+}
+
+function renderVenueFilter() {
+  const sel = document.getElementById('venue-filter');
+  const venueNames = [...new Set(state.shows.filter(s => s.score > 0).map(s => s.venue))].sort();
+  sel.innerHTML = '<option value="all">All Venues</option>' +
+    venueNames.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join('');
+  sel.value = state.venueFilter;
+}
+
+function renderChips() {
+  const el = document.getElementById('score-chips');
+  el.innerHTML = SCORE_THRESHOLDS.map(({ val, label }) =>
+    `<button class="chip ${state.minScore === val ? 'active' : ''}" data-score="${val}">${label}</button>`
+  ).join('');
+}
+
+function renderProfile() {
+  const el = document.getElementById('spotify-profile');
+  if (!state.profile) { el.innerHTML = ''; return; }
+  el.className = 'spotify-profile' + (state.showProfile ? ' visible' : '');
+
+  const p = state.profile;
+  const genres = (p.topGenres || []).slice(0, 8);
+  const artists = (p.topArtists || []).slice(0, 5).map(a => typeof a === 'string' ? a : a.name);
+
+  el.innerHTML = `
+    <div class="spotify-profile-header">
+      <div class="spotify-dot"></div>
+      <span class="spotify-profile-label">Your Spotify Profile</span>
+    </div>
+    <div>
+      <p class="spotify-section-label">TOP GENRES</p>
+      <div>${genres.map(g => {
+        const name = typeof g === 'string' ? g : g.genre;
+        return `<span class="spotify-genre-pill">${esc(name)}</span>`;
+      }).join('')}</div>
+    </div>
+    <div class="spotify-artists">
+      <p class="spotify-section-label">TOP ARTISTS</p>
+      <p>${artists.map(a => esc(a)).join(' · ')}</p>
+    </div>`;
+}
+
+function renderLegend(count) {
+  document.getElementById('legend').innerHTML = `
+    <span class="legend-count">${count} show${count !== 1 ? 's' : ''} found</span>
+    <div class="legend-dots">
+      <span class="legend-dot"><span style="background:#22c55e;"></span>Perfect Match</span>
+      <span class="legend-dot"><span style="background:#eab308;"></span>Strong Match</span>
+      <span class="legend-dot"><span style="background:#f97316;"></span>Worth Checking</span>
+    </div>`;
+}
+
+function renderShowCard(show) {
+  const color = getMatchColor(show.score);
+  const venue = getVenue(show.venue);
+  const dateInfo = formatDate(show.date);
+  const genres = (show.spotifyGenres || []).slice(0, 3);
+
+  const genreHTML = genres.length > 0
+    ? `<div class="genre-pills">${genres.map(g => `<span class="genre-pill">${esc(g)}</span>`).join('')}</div>`
+    : '';
+
+  const reasonHTML = show.matchReason && show.score > 0
+    ? `<div class="match-reason" style="background:${color}12;border:1px solid ${color}25;">
+        <span style="color:${color};">🎧 ${esc(show.matchReason)}</span>
+      </div>`
+    : '';
+
+  const badgeHTML = dateInfo.badge ? `<span class="date-badge">${esc(dateInfo.badge)}</span>` : '';
+
+  const link = show.ticketUrl ? ` onclick="window.open('${esc(show.ticketUrl)}', '_blank')"` : '';
+
+  return `
+    <div class="show-card"${link}>
+      <div class="show-card-bar" style="background:linear-gradient(90deg, ${color}, ${color}88);"></div>
+      <div class="show-card-body">
+        <div class="show-card-top">
+          <div>
+            <div class="show-card-artist">${esc(show.artist)}</div>
+            <div class="show-card-venue">${esc(venue.name)}${venue.neighborhood ? ' · ' + esc(venue.neighborhood) : ''}</div>
+          </div>
+          <div class="score-circle" style="border-color:${color};">
+            <span style="color:${color};">${show.score}</span>
+          </div>
+        </div>
+        ${genreHTML}
+        ${reasonHTML}
+        <div class="show-card-footer">
+          <div class="show-card-date">
+            <span>${dateInfo.label ? esc(dateInfo.label) : ''}${show.time ? ' · ' + esc(show.time) : ''}</span>
+            ${badgeHTML}
+          </div>
+          <span class="show-card-price">${esc(show.price || '')}</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderCompactRow(show) {
+  const color = getMatchColor(show.score);
+  const venue = getVenue(show.venue);
+  const dateInfo = formatDate(show.date);
+  const link = show.ticketUrl ? ` onclick="window.open('${esc(show.ticketUrl)}', '_blank')"` : '';
+
+  return `
+    <div class="compact-row"${link}>
+      <div class="compact-color" style="background:${color};opacity:0.7;"></div>
+      <div class="compact-info">
+        <div class="compact-top">
+          <span class="compact-artist">${esc(show.artist)}</span>
+          <span class="compact-sep">·</span>
+          <span class="compact-venue">${esc(venue.name)}</span>
+        </div>
+        <div class="compact-meta">
+          ${dateInfo.label ? esc(dateInfo.label) : ''}${show.time ? ' · ' + esc(show.time) : ''}${show.price ? ' · ' + esc(show.price) : ''}
+        </div>
+      </div>
+      <span class="compact-score" style="color:${color};">${show.score}</span>
+    </div>`;
+}
+
+function renderShows() {
+  const filtered = getFiltered();
+  const container = document.getElementById('shows-container');
+
+  renderLegend(filtered.length);
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div class="empty">
+        <h3>No shows match your filters</h3>
+        <p>Try broadening your venue or match score filter</p>
+      </div>`;
+    return;
+  }
+
+  if (state.view === 'compact') {
+    container.innerHTML = `<div class="shows-compact">${filtered.map(renderCompactRow).join('')}</div>`;
+  } else {
+    container.innerHTML = `<div class="shows-grid">${filtered.map(renderShowCard).join('')}</div>`;
+  }
+}
+
+function render() {
+  renderTopPick();
+  renderVenueFilter();
+  renderChips();
+  renderProfile();
+  renderShows();
+}
+
+// --- Events ---
+document.getElementById('venue-filter').addEventListener('change', (e) => {
+  state.venueFilter = e.target.value;
+  renderShows();
+});
+
+document.getElementById('sort-by').addEventListener('change', (e) => {
+  state.sortBy = e.target.value;
+  renderShows();
+});
+
+document.getElementById('score-chips').addEventListener('click', (e) => {
+  const btn = e.target.closest('.chip');
+  if (!btn) return;
+  state.minScore = parseInt(btn.dataset.score);
+  renderChips();
+  renderShows();
+});
+
+document.getElementById('profile-toggle').addEventListener('click', () => {
+  state.showProfile = !state.showProfile;
+  const btn = document.getElementById('profile-toggle');
+  btn.textContent = state.showProfile ? 'Hide Profile' : 'Show Profile';
+  btn.classList.toggle('active', state.showProfile);
+  renderProfile();
+});
+
+document.querySelector('.controls-right').addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-view]');
+  if (!btn) return;
+  state.view = btn.dataset.view;
+  document.querySelectorAll('[data-view]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderShows();
+});
+
+// --- Load Data ---
+async function init() {
+  const container = document.getElementById('shows-container');
+  container.innerHTML = '<div class="loading">Loading shows...</div>';
+
+  try {
+    const res = await fetch('data.json');
+    if (!res.ok) throw new Error('No data yet');
+    const data = await res.json();
+
+    state.shows = data.matches || [];
+    state.profile = data.profile || null;
+    state.venues = data.venues || [];
+
+    render();
+
+    if (data.updatedAt) {
+      const d = new Date(data.updatedAt);
+      document.getElementById('updated').textContent =
+        'Last updated ' + d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+    }
+  } catch (err) {
+    container.innerHTML = `
+      <div class="empty">
+        <h3>No data yet</h3>
+        <p>Run <code style="background:rgba(255,255,255,0.08);padding:2px 8px;border-radius:4px;">npm run update</code> to scrape venues and score shows.</p>
+      </div>`;
+  }
+}
+
+init();
+</script>
+</body>
+</html>

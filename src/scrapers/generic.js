@@ -85,12 +85,27 @@ function extractEventsGeneric($, venue) {
 }
 
 function cleanArtist(raw) {
-  return raw
+  let name = raw
     .replace(/\n/g, ' ')
     .replace(/\s+/g, ' ')
-    .replace(/^(presented by|live:)\s*/i, '')
+    .trim();
+
+  // Deduplicate repeated names like "Florist Florist" or "Gary Bartz Gary Bartz"
+  const half = Math.floor(name.length / 2);
+  const firstHalf = name.slice(0, half).trim();
+  const secondHalf = name.slice(half).trim();
+  if (firstHalf && firstHalf === secondHalf) {
+    name = firstHalf;
+  }
+
+  // Strip common prefixes/suffixes
+  name = name
+    .replace(/^(presented by|live:|up next|lpr presents?|p91 \+ lpr presents?|monster energy outbreak presents:?)\s*/i, '')
+    .replace(/\s*(tickets?|buy tickets?|on sale.*|sold out)$/i, '')
     .trim()
     .slice(0, 150);
+
+  return name;
 }
 
 function cleanTime(raw) {

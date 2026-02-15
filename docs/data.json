@@ -1,0 +1,63 @@
+{
+  "updatedAt": "2026-02-15T21:00:00.000Z",
+  "matches": [
+    { "artist": "Khruangbin", "venue": "Brooklyn Paramount", "date": "2026-03-14", "time": "8:00 PM", "price": "$65", "ticketUrl": "#", "score": 97, "matchReason": "In your top artists", "spotifyGenres": ["psychedelic soul", "funk", "global"], "source": "sample" },
+    { "artist": "Floating Points", "venue": "Brooklyn Steel", "date": "2026-03-08", "time": "9:00 PM", "price": "$45", "ticketUrl": "#", "score": 91, "matchReason": "Genre match: electronic + ambient", "spotifyGenres": ["electronic", "ambient", "experimental"], "source": "sample" },
+    { "artist": "Arooj Aftab", "venue": "National Sawdust", "date": "2026-02-28", "time": "7:30 PM", "price": "$35", "ticketUrl": "#", "score": 88, "matchReason": "Similar to artists you like", "spotifyGenres": ["neo-sufi", "jazz", "ambient"], "source": "sample" },
+    { "artist": "Magdalena Bay", "venue": "Webster Hall", "date": "2026-03-22", "time": "8:00 PM", "price": "$40", "ticketUrl": "#", "score": 85, "matchReason": "Genre match: synth-pop + indie", "spotifyGenres": ["synth-pop", "electropop", "indie"], "source": "sample" },
+    { "artist": "Mdou Moctar", "venue": "Music Hall of Williamsburg", "date": "2026-03-05", "time": "9:00 PM", "price": "$30", "ticketUrl": "#", "score": 82, "matchReason": "Similar to Khruangbin, Bombino", "spotifyGenres": ["tuareg guitar", "rock", "psychedelic"], "source": "sample" },
+    { "artist": "Nala Sinephro", "venue": "Le Poisson Rouge", "date": "2026-03-18", "time": "8:30 PM", "price": "$28", "ticketUrl": "#", "score": 80, "matchReason": "Genre match: jazz + ambient", "spotifyGenres": ["jazz", "ambient", "electronic"], "source": "sample" },
+    { "artist": "bar italia", "venue": "Brooklyn Steel", "date": "2026-04-02", "time": "8:00 PM", "price": "$35", "ticketUrl": "#", "score": 76, "matchReason": "Genre match: indie rock", "spotifyGenres": ["post-punk", "indie rock", "noise pop"], "source": "sample" },
+    { "artist": "Saba", "venue": "Brooklyn Paramount", "date": "2026-03-29", "time": "8:00 PM", "price": "$50", "ticketUrl": "#", "score": 74, "matchReason": "Genre match: hip-hop", "spotifyGenres": ["hip-hop", "conscious rap", "jazz rap"], "source": "sample" },
+    { "artist": "Yves Tumor", "venue": "Brooklyn Steel", "date": "2026-04-18", "time": "9:00 PM", "price": "$40", "ticketUrl": "#", "score": 73, "matchReason": "Genre match: experimental", "spotifyGenres": ["experimental rock", "glam", "noise pop"], "source": "sample" },
+    { "artist": "Eyedress", "venue": "Warsaw", "date": "2026-03-12", "time": "9:00 PM", "price": "$25", "ticketUrl": "#", "score": 71, "matchReason": "Similar to Beach House, Diiv", "spotifyGenres": ["dream pop", "shoegaze", "lo-fi"], "source": "sample" },
+    { "artist": "Portico Quartet", "venue": "Nublu", "date": "2026-04-10", "time": "10:00 PM", "price": "$20", "ticketUrl": "#", "score": 69, "matchReason": "Genre overlap: jazz + electronic", "spotifyGenres": ["jazz", "electronic", "ambient"], "source": "sample" },
+    { "artist": "JPEGMAFIA", "venue": "Webster Hall", "date": "2026-04-05", "time": "8:00 PM", "price": "$45", "ticketUrl": "#", "score": 67, "matchReason": "Experimental overlap", "spotifyGenres": ["experimental hip-hop", "noise", "glitch"], "source": "sample" },
+    { "artist": "KOKOKO!", "venue": "Brooklyn Bowl", "date": "2026-03-20", "time": "9:00 PM", "price": "$22", "ticketUrl": "#", "score": 64, "matchReason": "Discovery pick: global + electronic", "spotifyGenres": ["afro-electronic", "punk", "experimental"], "source": "sample" },
+    { "artist": "Brittany Howard", "venue": "Sony Hall", "date": "2026-04-15", "time": "8:00 PM", "price": "$55", "ticketUrl": "#", "score": 62, "matchReason": "Genre match: soul + rock", "spotifyGenres": ["soul", "rock", "R&B"], "source": "sample" },
+    { "artist": "Irreversible Entanglements", "venue": "National Sawdust", "date": "2026-04-08", "time": "7:30 PM", "price": "$25", "ticketUrl": "#", "score": 58, "matchReason": "Discovery pick: experimental jazz", "spotifyGenres": ["free jazz", "spoken word", "avant-garde"], "source": "sample" }
+  ],
+  "profile": {
+    "topArtists": [
+      { "name": "Say She She", "genres": ["indie soul", "psychedelic soul"] },
+      { "name": "Chance the Rapper", "genres": ["hip-hop", "conscious rap"] },
+      { "name": "LION BABE", "genres": ["alternative r&b", "indie soul"] },
+      { "name": "Kid Cudi", "genres": ["hip-hop", "psychedelic hip-hop"] },
+      { "name": "Teddy Swims", "genres": ["pop soul", "r&b"] },
+      { "name": "Ravyn Lenae", "genres": ["alternative r&b", "indie soul"] },
+      { "name": "Billy Strings", "genres": ["jam band", "bluegrass"] },
+      { "name": "Cautious Clay", "genres": ["alternative r&b", "indie soul"] },
+      { "name": "The Black Keys", "genres": ["blues rock", "indie rock"] },
+      { "name": "When Chai Met Toast", "genres": ["indian indie", "indie folk"] }
+    ],
+    "topGenres": [
+      { "genre": "alternative r&b", "count": 6 },
+      { "genre": "indie soul", "count": 4 },
+      { "genre": "classic rock", "count": 4 },
+      { "genre": "pop soul", "count": 3 },
+      { "genre": "retro soul", "count": 2 },
+      { "genre": "jam band", "count": 2 },
+      { "genre": "blues rock", "count": 2 },
+      { "genre": "modern blues", "count": 2 }
+    ],
+    "recentArtists": [
+      { "name": "Tyla" },
+      { "name": "Steve Aoki" },
+      { "name": "Dermot Kennedy" },
+      { "name": "Kygo" },
+      { "name": "Duke Dumont" }
+    ]
+  },
+  "venues": [
+    { "name": "Brooklyn Paramount", "neighborhood": "Downtown Brooklyn" },
+    { "name": "Brooklyn Steel", "neighborhood": "Williamsburg" },
+    { "name": "Music Hall of Williamsburg", "neighborhood": "Williamsburg" },
+    { "name": "Brooklyn Bowl", "neighborhood": "Williamsburg" },
+    { "name": "Warsaw", "neighborhood": "Greenpoint" },
+    { "name": "Sony Hall", "neighborhood": "Midtown" },
+    { "name": "Webster Hall", "neighborhood": "East Village" },
+    { "name": "Le Poisson Rouge", "neighborhood": "Greenwich Village" },
+    { "name": "National Sawdust", "neighborhood": "Williamsburg" },
+    { "name": "Nublu", "neighborhood": "East Village" }
+  ]
+}

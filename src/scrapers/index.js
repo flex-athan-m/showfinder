@@ -53,9 +53,12 @@ async function scrapeAllVenues() {
       results.success.push(venue.name);
     }
 
-    // Deduplicate by artist+date within this venue
+    // Filter junk entries and deduplicate
+    const junkPatterns = /^(events? list|upcoming shows?|closed|open for bowling|buy tickets?|vip bowling|bowlin'|lpr presents?|p91|upcoming events?)$/i;
     const seen = new Set();
     const dedupedEvents = events.filter((e) => {
+      if (!e.artist || e.artist.length < 3) return false;
+      if (junkPatterns.test(e.artist.trim())) return false;
       const key = `${e.artist.toLowerCase()}-${e.date}`;
       if (seen.has(key)) return false;
       seen.add(key);
