@@ -1,17 +1,56 @@
 {
-  "updatedAt": "2026-06-22T15:24:42.964Z",
+  "updatedAt": "2026-06-29T14:03:29.857Z",
   "matches": [
     {
-      "artist": "they are gutting a body of water",
-      "date": "2026-12-10",
-      "time": "12:00 AM",
+      "artist": "Appearing tonightBlue Note Jazz Festival Presents Ibrahim Maalouf",
+      "date": "2026-06-29",
+      "time": "6:30 PM",
       "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/they-are-gutting-a-body-of-brooklyn-new-york-12-10-2026/event/000064B2B6DEBFAC",
-      "venue": "Warsaw",
+      "ticketUrl": "https://www.ticketweb.com/event/ibrahim-maalouf-sony-hall-tickets/14009244?pl=sonyhall&REFID=260629site",
+      "venue": "Sony Hall",
       "source": "scrape",
       "score": 84,
-      "matchReason": "Related to your artist: geese",
-      "spotifyArtistId": "3VNzWLePg9jTvQ2ximYOzW",
+      "matchReason": "Related to your artist: jon batiste",
+      "spotifyArtistId": "0NSO0g40h9CTj13hKPskeb",
+      "spotifyGenres": [
+        "jazz",
+        "classical",
+        "trumpet",
+        "jazz fusion",
+        "jazz-funk",
+        "contemporary jazz",
+        "jazz pop",
+        "international",
+        "modern jazz",
+        "french jazz"
+      ]
+    },
+    {
+      "artist": "Blue Note Jazz Festival Presents Destin Conrad",
+      "date": "2026-06-30",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.ticketweb.com/event/destin-conrad-sony-hall-tickets/14767183?pl=sonyhall&REFID=260630site",
+      "venue": "Sony Hall",
+      "source": "scrape",
+      "score": 84,
+      "matchReason": "Related to your artist: ari lennox",
+      "spotifyArtistId": "0tbeZu9lv8YEKSQ9tZSslu",
+      "spotifyGenres": [
+        "queer"
+      ]
+    },
+    {
+      "artist": "Blue Note Jazz Festival Presents Young Gun Silver Fox",
+      "date": "2001-01-01",
+      "time": "",
+      "price": "",
+      "ticketUrl": "https://www.ticketweb.com/event/young-gun-silver-fox-sony-hall-tickets/14761203?pl=sonyhall&REFID=260701site",
+      "venue": "Sony Hall",
+      "source": "scrape",
+      "score": 84,
+      "matchReason": "Related to your artist: steely dan",
+      "spotifyArtistId": "0tMnuEXTeJeHbslcV8OybJ",
       "spotifyGenres": []
     },
     {
@@ -24,7 +63,7 @@
       "source": "scrape",
       "score": 79,
       "matchReason": "Strong genre match: pop, dance-pop, pop soul",
-      "spotifyArtistId": "6prmLEyn4LfHlD9NnXWlf7",
+      "spotifyArtistId": "4bYPcJP5jwMhSivRcqie2n",
       "spotifyGenres": [
         "pop",
         "dance-pop",
@@ -36,24 +75,6 @@
         "2010s",
         "lgbtqi",
         "synthpop"
-      ]
-    },
-    {
-      "artist": "Pomplamoose",
-      "date": "2026-08-20",
-      "time": "11:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/pomplamoose-brooklyn-new-york-08-20-2026/event/0000649EE8303151",
-      "venue": "Warsaw",
-      "source": "scrape",
-      "score": 79,
-      "matchReason": "Strong genre match: rock, jazz, indie pop",
-      "spotifyArtistId": "5dHfLBNU8zoypgKefzEB1c",
-      "spotifyGenres": [
-        "rock",
-        "jazz",
-        "indie pop",
-        "funk pop"
       ]
     },
     {
@@ -91,6 +112,24 @@
         "neo soul",
         "psychedelic soul",
         "indie soul"
+      ]
+    },
+    {
+      "artist": "Failure",
+      "date": "2026-10-13",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/failure-brooklyn-new-york-10-13-2026/event/00006494B09DB979",
+      "venue": "Warsaw",
+      "source": "scrape",
+      "score": 76,
+      "matchReason": "Genre match: rock, alternative rock",
+      "spotifyArtistId": "3grvcGPaLhfrD5CYsecr4j",
+      "spotifyGenres": [
+        "rock",
+        "alternative rock",
+        "space rock",
+        "post-hardcore"
       ]
     },
     {
@@ -137,6 +176,29 @@
       ]
     },
     {
+      "artist": "King Woman",
+      "date": "Fri July 10th, 2026\n\t\t7:00PM",
+      "time": "7:00 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/kwcb26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 76,
+      "matchReason": "Genre match: rock, indie rock",
+      "spotifyArtistId": "4C20AUsp5T2VNHmzSTSzYn",
+      "spotifyGenres": [
+        "post-metal",
+        "post-rock",
+        "metal",
+        "rock",
+        "doom",
+        "doom metal",
+        "drone",
+        "indie rock",
+        "indie"
+      ]
+    },
+    {
       "artist": "American Football",
       "date": "2026-07-09",
       "time": "11:00 PM",
@@ -146,7 +208,7 @@
       "source": "scrape",
       "score": 68,
       "matchReason": "Genre match: indie rock",
-      "spotifyArtistId": "7FKTg75ADVMZgY3P9ZMRtH",
+      "spotifyArtistId": "5FwydyGVcsQllnM4xM6jw4",
       "spotifyGenres": [
         "emo",
         "indie rock",
@@ -154,38 +216,6 @@
         "math rock",
         "indie",
         "post-rock"
-      ]
-    },
-    {
-      "artist": "LUCKI",
-      "date": "2026-09-09",
-      "time": "11:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/lucki-brooklyn-new-york-09-09-2026/event/000064ACBBFFEB1C",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 68,
-      "matchReason": "Genre match: trap",
-      "spotifyArtistId": "3TVXtAsR1Inumwj472S9r4",
-      "spotifyGenres": [
-        "trap"
-      ]
-    },
-    {
-      "artist": "Nation of Language",
-      "date": "2026-09-19",
-      "time": "11:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/nation-of-language-brooklyn-new-york-09-19-2026/event/0000644BF2A8E999",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 68,
-      "matchReason": "Genre match: indie pop",
-      "spotifyArtistId": "5JWBow4ywgKNQ5HBxY8hcz",
-      "spotifyGenres": [
-        "post-punk",
-        "indie pop",
-        "synthwave"
       ]
     },
     {
@@ -230,42 +260,27 @@
       ]
     },
     {
-      "artist": "Yard Act",
-      "date": "2026-08-13",
-      "time": "11:00 PM",
+      "artist": "Pennywise",
+      "date": "2026-10-03",
+      "time": "10:30 PM",
       "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/yard-act-brooklyn-new-york-08-13-2026/event/00006491BFCEDAD7",
+      "ticketUrl": "https://www.ticketmaster.com/pennywise-brooklyn-new-york-10-03-2026/event/000064D2C87FDFFA",
       "venue": "Warsaw",
       "source": "scrape",
       "score": 68,
-      "matchReason": "Genre match: indie rock",
-      "spotifyArtistId": "2h3ooJn8m8X8cL2g1BZ1Rd",
+      "matchReason": "Genre match: rock",
+      "spotifyArtistId": "0sOYjMxpG0CxZhuKheGQ36",
       "spotifyGenres": [
-        "indie rock",
-        "post-punk",
-        "post-punk 2k",
-        "dance-punk",
-        "alternative punk",
-        "english",
-        "indie",
-        "punk"
-      ]
-    },
-    {
-      "artist": "Failure",
-      "date": "2026-10-13",
-      "time": "11:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/failure-brooklyn-new-york-10-13-2026/event/00006494B09DB979",
-      "venue": "Warsaw",
-      "source": "scrape",
-      "score": 68,
-      "matchReason": "Genre match: alternative rock",
-      "spotifyArtistId": "3grvcGPaLhfrD5CYsecr4j",
-      "spotifyGenres": [
-        "alternative rock",
-        "space rock",
-        "post-hardcore"
+        "punk",
+        "punk rock",
+        "skate punk",
+        "rock",
+        "american",
+        "usa",
+        "melodic hardcore",
+        "california",
+        "los angeles",
+        "rock and indie"
       ]
     },
     {
@@ -333,38 +348,26 @@
       ]
     },
     {
-      "artist": "Blue Note Jazz Festival Presents Cymande",
-      "date": "2026-06-27",
+      "artist": "Sun Kil Moon",
+      "date": "2001-09-01",
       "time": "",
       "price": "",
-      "ticketUrl": "https://www.ticketweb.com/event/cymande-sony-hall-tickets/14756643?pl=sonyhall&REFID=260627site",
+      "ticketUrl": "https://www.ticketweb.com/event/sun-kil-moon-sony-hall-tickets/14799173?pl=sonyhall&REFID=260709site",
       "venue": "Sony Hall",
       "source": "scrape",
-      "score": 68,
-      "matchReason": "Genre match: funk",
-      "spotifyArtistId": "4hfcSstwnyuBoek1dQwLkG",
+      "score": 59,
+      "matchReason": "Fuzzy genre overlap: folk rock, contemporary folk",
+      "spotifyArtistId": "4G0XDEk7RbA4BBCTs917U9",
       "spotifyGenres": [
-        "funk",
-        "british",
-        "rock and indie",
-        "psychedelic soul",
-        "nyahbinghi"
-      ]
-    },
-    {
-      "artist": "Daniela Andrade",
-      "date": "Tue June 23rd, 2026\n\t\t6:30PM",
-      "time": "6:30 PM",
-      "price": "",
-      "ticketUrl": "https://lpr.com/lpr_events/da26nyc/",
-      "venue": "Le Poisson Rouge",
-      "source": "scrape",
-      "score": 68,
-      "matchReason": "Genre match: alternative r&b",
-      "spotifyArtistId": "1ooV8YZC1KbpEcrmI8WH0F",
-      "spotifyGenres": [
-        "queer",
-        "alternative r&b"
+        "folk rock",
+        "contemporary folk",
+        "slowcore",
+        "indie folk",
+        "progressive folk",
+        "shoegaze",
+        "classic pop and rock",
+        "singer/songwriter",
+        "musical comedy"
       ]
     },
     {
@@ -392,81 +395,6 @@
       ]
     },
     {
-      "artist": "Mastodon",
-      "date": "2026-09-24",
-      "time": "10:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/mastodon-brooklyn-new-york-09-24-2026/event/000064B4D0903496",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 50,
-      "matchReason": "Fuzzy genre overlap: alternative metal, hard rock",
-      "spotifyArtistId": "0GDGKpJFhVpcjIGF8N6Ewt",
-      "spotifyGenres": [
-        "progressive metal",
-        "sludge metal",
-        "metal",
-        "heavy metal",
-        "alternative metal",
-        "hard rock",
-        "stoner metal",
-        "american",
-        "groove metal",
-        "sludge"
-      ]
-    },
-    {
-      "artist": "Fiddlehead",
-      "date": "2026-07-31",
-      "time": "10:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/fiddlehead-brooklyn-new-york-07-31-2026/event/0000648A8F425F0D",
-      "venue": "Warsaw",
-      "source": "scrape",
-      "score": 50,
-      "matchReason": "Fuzzy genre overlap: alternative punk, alternative indie",
-      "spotifyArtistId": "4DUQBYAyOTZotSEdKhaf6c",
-      "spotifyGenres": [
-        "alternative punk",
-        "emo",
-        "post hardcore",
-        "alternative indie"
-      ]
-    },
-    {
-      "artist": "Social Distortion",
-      "date": "2026-09-11",
-      "time": "10:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/social-distortion-brooklyn-new-york-09-11-2026/event/00006453B599B94E",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 45,
-      "matchReason": "Fuzzy genre overlap: punk rock",
-      "spotifyArtistId": "16nn7kCHPWIB6uK09GQCNI",
-      "spotifyGenres": [
-        "punk",
-        "punk rock",
-        "usa",
-        "cowpunk",
-        "california",
-        "fullerton"
-      ]
-    },
-    {
-      "artist": "Social Distortion",
-      "date": "2026-09-12",
-      "time": "10:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/social-distortion-brooklyn-new-york-09-12-2026/event/00006453B59CB954",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 45,
-      "matchReason": "Fuzzy genre overlap: punk rock",
-      "spotifyArtistId": null,
-      "spotifyGenres": []
-    },
-    {
       "artist": "Ceremony",
       "date": "2026-10-02",
       "time": "11:00 PM",
@@ -476,7 +404,7 @@
       "source": "scrape",
       "score": 45,
       "matchReason": "Fuzzy genre overlap: punk rock",
-      "spotifyArtistId": "0yNLKJebCb8Aueb54LYya3",
+      "spotifyArtistId": "2Au9zIICTEr0oeV1iQrJ6X",
       "spotifyGenres": [
         "hardcore punk",
         "punk rock",
@@ -493,7 +421,7 @@
       "source": "scrape",
       "score": 45,
       "matchReason": "Fuzzy genre overlap: punk rock",
-      "spotifyArtistId": "3btzEQD6sugImIHPMRgkwV",
+      "spotifyArtistId": "6Jrxnp0JgqmeUX1veU591p",
       "spotifyGenres": [
         "punk",
         "punk rock",
@@ -510,78 +438,11 @@
       "source": "scrape",
       "score": 45,
       "matchReason": "Fuzzy genre overlap: punk rock",
-      "spotifyArtistId": null,
-      "spotifyGenres": []
-    },
-    {
-      "artist": "Wale & Smino - Everything Is A Lot... The Tour",
-      "date": "2026-06-23",
-      "time": "11:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/wale-smino-everything-is-a-lot-brooklyn-new-york-06-23-2026/event/00006446E462118B",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "67nwj3Y5sZQLl72VNUHEYE",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "Michaël Brun Presents BAYO - 3 Day Pass",
-      "date": "2026-06-25",
-      "time": "4:00 AM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/michael-brun-presents-bayo-3-day-brooklyn-new-york-06-25-2026/event/0000645AF9A2B169",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "6Qpnrt9GMCBN54ec9eTsAu",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "Michaël Brun Presents Bayo",
-      "date": "2026-06-25",
-      "time": "11:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/michael-brun-presents-bayo-brooklyn-new-york-06-25-2026/event/0000645AED328F4C",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "6BbqU3r1G2mwkRIfIbkCek",
+      "spotifyArtistId": "6Jrxnp0JgqmeUX1veU591p",
       "spotifyGenres": [
-        "makina"
-      ]
-    },
-    {
-      "artist": "Michaël Brun Presents Bayo",
-      "date": "2026-06-26",
-      "time": "11:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/michael-brun-presents-bayo-brooklyn-new-york-06-26-2026/event/0000645AED378F58",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "6BbqU3r1G2mwkRIfIbkCek",
-      "spotifyGenres": [
-        "makina"
-      ]
-    },
-    {
-      "artist": "Michaël Brun Presents Bayo",
-      "date": "2026-06-27",
-      "time": "11:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/michael-brun-presents-bayo-brooklyn-new-york-06-27-2026/event/0000645AED3A8F75",
-      "venue": "Brooklyn Paramount",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "6BbqU3r1G2mwkRIfIbkCek",
-      "spotifyGenres": [
-        "makina"
+        "punk",
+        "punk rock",
+        "grunge"
       ]
     },
     {
@@ -767,6 +628,19 @@
       "spotifyGenres": []
     },
     {
+      "artist": "Linea Personal: TODO Ø NADA",
+      "date": "2026-09-06",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/linea-personal-todo-nada-brooklyn-new-york-09-06-2026/event/000064D6070BF163",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5Bb18koIu6bYuvZWzYKkLJ",
+      "spotifyGenres": []
+    },
+    {
       "artist": "LUCKI",
       "date": "2026-09-08",
       "time": "11:00 PM",
@@ -776,8 +650,25 @@
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "3TVXtAsR1Inumwj472S9r4",
-      "spotifyGenres": []
+      "spotifyArtistId": "5tQMB0cuNXdCtzovGt55uD",
+      "spotifyGenres": [
+        "trap"
+      ]
+    },
+    {
+      "artist": "LUCKI",
+      "date": "2026-09-09",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/lucki-brooklyn-new-york-09-09-2026/event/000064ACBBFFEB1C",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5tQMB0cuNXdCtzovGt55uD",
+      "spotifyGenres": [
+        "trap"
+      ]
     },
     {
       "artist": "PRESIDENT: North American Campaign 2026",
@@ -789,7 +680,72 @@
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "7tRLhqoqu70xyiZ29ne5SV",
+      "spotifyArtistId": null,
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Social Distortion",
+      "date": "2026-09-11",
+      "time": "10:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/social-distortion-brooklyn-new-york-09-11-2026/event/00006453B599B94E",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "16nn7kCHPWIB6uK09GQCNI",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Social Distortion",
+      "date": "2026-09-12",
+      "time": "10:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/social-distortion-brooklyn-new-york-09-12-2026/event/00006453B59CB954",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "16nn7kCHPWIB6uK09GQCNI",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Brandon Flowers",
+      "date": "2026-09-18",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/brandon-flowers-brooklyn-new-york-09-18-2026/event/000064D1F5CA5170",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "0nnBZ8FXWjG9wZgM2cpfeb",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Nation of Language",
+      "date": "2026-09-19",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/nation-of-language-brooklyn-new-york-09-19-2026/event/0000644BF2A8E999",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5JWBow4ywgKNQ5HBxY8hcz",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Mastodon",
+      "date": "2026-09-24",
+      "time": "10:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/mastodon-brooklyn-new-york-09-24-2026/event/000064B4D0903496",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "0GDGKpJFhVpcjIGF8N6Ewt",
       "spotifyGenres": []
     },
     {
@@ -858,6 +814,45 @@
       "spotifyGenres": []
     },
     {
+      "artist": "Knocked Loose & Denzel Curry",
+      "date": "2026-10-08",
+      "time": "10:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/knocked-loose-denzel-curry-brooklyn-new-york-10-08-2026/event/000064B4B116DE10",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "6fxyWrfmjcbj5d12gXeiNV",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Kelela - new avatar live",
+      "date": "2026-10-09",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/kelela-new-avatar-live-brooklyn-new-york-10-09-2026/event/000064BCA5E7D31B",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "1U0sIzpRtDkvu1hXXzxh60",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Kelela - new avatar live",
+      "date": "2026-10-10",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/kelela-new-avatar-live-brooklyn-new-york-10-10-2026/event/000064BCA5E4D315",
+      "venue": "Brooklyn Paramount",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "1U0sIzpRtDkvu1hXXzxh60",
+      "spotifyGenres": []
+    },
+    {
       "artist": "Just Announced",
       "date": "",
       "time": "",
@@ -881,32 +876,6 @@
       "score": 0,
       "matchReason": "No match found",
       "spotifyArtistId": "44LPOpECjnIlnwH91wo2ir",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "Numbers On The Board - Presented by Enjoy Basketball ",
-      "date": "2026-06-24",
-      "time": "10:00 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/numbers-on-the-board-presented-by-brooklyn-new-york-06-24-2026/event/00006496CDFF5EB6",
-      "venue": "Warsaw",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "0ONHkAv9pCAFxb0zJwDNTy",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "CHAVA Presenta: Colombianos En Nueva York (World Cup Edición)",
-      "date": "2026-06-27",
-      "time": "10:30 PM",
-      "price": "",
-      "ticketUrl": "https://www.ticketmaster.com/chava-presenta-colombianos-en-nueva-york-brooklyn-new-york-06-27-2026/event/000064ADD74081F8",
-      "venue": "Warsaw",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "4GC2cLlpBnWIoDhvwldjUT",
       "spotifyGenres": []
     },
     {
@@ -975,6 +944,32 @@
       "spotifyGenres": []
     },
     {
+      "artist": "Fiddlehead",
+      "date": "2026-07-31",
+      "time": "10:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/fiddlehead-brooklyn-new-york-07-31-2026/event/0000648A8F425F0D",
+      "venue": "Warsaw",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "0qu422H5MOoQxGjd4IzHbS",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Yard Act",
+      "date": "2026-08-13",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/yard-act-brooklyn-new-york-08-13-2026/event/00006491BFCEDAD7",
+      "venue": "Warsaw",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "2h3ooJn8m8X8cL2g1BZ1Rd",
+      "spotifyGenres": []
+    },
+    {
       "artist": "Eagles Of Death Metal: Death By Sexy 20th Anniversary Tour",
       "date": "2026-08-15",
       "time": "11:00 PM",
@@ -997,7 +992,20 @@
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "5NhgsV7qPWHZqYEMKzbYvo",
+      "spotifyArtistId": "6nDHxcxzE1HEYG9PYmuVQW",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Pomplamoose",
+      "date": "2026-08-20",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/pomplamoose-brooklyn-new-york-08-20-2026/event/0000649EE8303151",
+      "venue": "Warsaw",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5dHfLBNU8zoypgKefzEB1c",
       "spotifyGenres": []
     },
     {
@@ -1036,7 +1044,36 @@
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "5vEmQKLLJZkjXOryvufs3Y",
+      "spotifyArtistId": "3n8qeKQViV1waeCzZmS4Tx",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Horse Jumper of Love",
+      "date": "2026-09-25",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/horse-jumper-of-love-brooklyn-new-york-09-25-2026/event/000064DACC8ED93C",
+      "venue": "Warsaw",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "6U1lmwvy3I9dIYu9RalJi6",
+      "spotifyGenres": [
+        "shoegaze",
+        "slowcore"
+      ]
+    },
+    {
+      "artist": "INOHA",
+      "date": "2026-09-30",
+      "time": "10:30 PM",
+      "price": "",
+      "ticketUrl": "https://www.ticketmaster.com/inoha-brooklyn-new-york-09-30-2026/event/000064D2C557D1F0",
+      "venue": "Warsaw",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "0uoN6ea8SXzhV7WxyrvT1h",
       "spotifyGenres": []
     },
     {
@@ -1049,7 +1086,7 @@
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "6toMXnM9tcozz7OmgxWtZg",
+      "spotifyArtistId": "1ZVACPeq7ccGCoUXwtafUU",
       "spotifyGenres": []
     },
     {
@@ -1088,7 +1125,7 @@
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "4OyAwz3jcZcejoUd3bc5Qt",
+      "spotifyArtistId": "5HMQ8Ndq4fhuLwhealQFO3",
       "spotifyGenres": []
     },
     {
@@ -1131,175 +1168,55 @@
       "spotifyGenres": []
     },
     {
-      "artist": "Appearing tonightBlue Note Jazz Festival Presents Third World A Tribute To Cat Coorewith Special Guest Kumar Fyah+ DJ Amy \"The Night Nurse\" Wachtel",
-      "date": "2026-06-22",
-      "time": "6:00 PM",
+      "artist": "they are gutting a body of water",
+      "date": "2026-12-10",
+      "time": "12:00 AM",
       "price": "",
-      "ticketUrl": "https://www.ticketweb.com/event/third-world-a-sony-hall-tickets/14837153?pl=sonyhall&REFID=260622site",
-      "venue": "Sony Hall",
+      "ticketUrl": "https://www.ticketmaster.com/they-are-gutting-a-body-of-brooklyn-new-york-12-10-2026/event/000064B2B6DEBFAC",
+      "venue": "Warsaw",
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "6L4AEX9CqQULzoOz3lN5CP",
-      "spotifyGenres": [
-        "psychobilly",
-        "female vocal"
-      ]
-    },
-    {
-      "artist": "Blue Note Jazz Festival Presents The Church The Singles Tour / 1980-2025w/ special guest DJ Andre (WLIR)",
-      "date": "2026-06-23",
-      "time": "",
-      "price": "",
-      "ticketUrl": "https://www.ticketweb.com/event/the-church-the-sony-hall-tickets/14293133?pl=sonyhall&REFID=260623site",
-      "venue": "Sony Hall",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "2ZfogSsOWP4mVfEqfpLXCt",
+      "spotifyArtistId": "3VNzWLePg9jTvQ2ximYOzW",
       "spotifyGenres": []
     },
     {
-      "artist": "Blue Note Jazz Festival Presents Big Freedia & Friends \"Pride In The Key Of Bounce\"",
-      "date": "2026-06-24",
-      "time": "",
-      "price": "",
-      "ticketUrl": "https://www.ticketweb.com/event/big-freedia-friends-sony-hall-tickets/14770723?pl=sonyhall&REFID=260624site",
-      "venue": "Sony Hall",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "2gyv1akuIB9fQvXoGSPaJr",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "Blue Note Jazz Festival Presents Annahstasia + Adi Oasis",
-      "date": "2026-06-26",
-      "time": "",
-      "price": "",
-      "ticketUrl": "https://www.ticketweb.com/event/annahstasia-adi-oasis-sony-hall-tickets/14774503?pl=sonyhall&REFID=260626site",
-      "venue": "Sony Hall",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "43WrziN4gBq2HqDXu2sQ9M",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "It’s Raining Queens Tour Martha Wash and Marsha Warfield Music Comedy Royalty",
-      "date": "2026-06-28",
-      "time": "",
-      "price": "",
-      "ticketUrl": "https://www.ticketweb.com/event/martha-wash-and-marsha-warfield-sony-hall-tickets/14850443?pl=sonyhall&REFID=260628site",
-      "venue": "Sony Hall",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "7htVGwGw3uAa7Axft4MTnx",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "KELS",
-      "date": "Mon June 22nd, 2026\n\t\t7:00PM",
-      "time": "7:00 PM",
-      "price": "",
-      "ticketUrl": "https://lpr.com/lpr_events/kels26nyc/",
-      "venue": "Le Poisson Rouge",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "64KEffDW9EtZ1y2vBYgq8T",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "The 22nd Annual",
-      "date": "Wed June 24th, 2026\n\t\t7:00PM",
-      "time": "7:00 PM",
-      "price": "",
-      "ticketUrl": "https://lpr.com/lpr_events/nycinc26/",
-      "venue": "Le Poisson Rouge",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "4nxD9EuQ95QbebYTjmhrsi",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "Frog and a Piano",
-      "date": "Thu June 25th, 2026\n\t\t7:00PM",
-      "time": "7:00 PM",
-      "price": "",
-      "ticketUrl": "https://lpr.com/lpr_events/frog26nyc/",
-      "venue": "Le Poisson Rouge",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "3ME5MgDqwM6G3UDLmwjftA",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "KatzPascale",
-      "date": "Fri June 26th, 2026\n\t\t6:30PM",
-      "time": "6:30 PM",
-      "price": "",
-      "ticketUrl": "https://lpr.com/lpr_events/kp26nyc/",
-      "venue": "Le Poisson Rouge",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "4MT74NV1GnOKWtwpEVRRu1",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "Klub Nocturno",
-      "date": "Sat June 27th, 2026\n\t\t11:00PM",
+      "artist": "Senses Fail Presents Still Searching",
+      "date": "2026-12-18",
       "time": "11:00 PM",
       "price": "",
-      "ticketUrl": "https://lpr.com/lpr_events/knhp26nyc/",
-      "venue": "Le Poisson Rouge",
+      "ticketUrl": "https://www.ticketmaster.com/senses-fail-presents-still-searching-brooklyn-new-york-12-18-2026/event/000064D2A6FA35AD",
+      "venue": "Warsaw",
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "3RHAgDFfQ7EiyGX0Twh0Ta",
+      "spotifyArtistId": "3QJzdZJYIAcoET1GcfpNGi",
       "spotifyGenres": []
     },
     {
-      "artist": "Matinee Social Club: 90s vs. 00s Decade Battle",
-      "date": "Sat June 27th, 2026\n\t\t5:00PM",
-      "time": "5:00 PM",
+      "artist": "Rumours ATL: A Fleetwood Mac Tribute",
+      "date": "2001-02-01",
+      "time": "",
       "price": "",
-      "ticketUrl": "https://lpr.com/lpr_events/msc062726nyc/",
-      "venue": "Le Poisson Rouge",
+      "ticketUrl": "https://www.ticketweb.com/event/rumours-atl-a-fleetwood-mac-sony-hall-tickets/14076034?pl=sonyhall&REFID=260702site",
+      "venue": "Sony Hall",
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "1tuaQcS0lPVmUbl2jYMuWI",
+      "spotifyArtistId": "08GQAI4eElDnROBrJRGE0X",
       "spotifyGenres": []
     },
     {
-      "artist": "Labiahead (all women Radiohead)",
-      "date": "Sun June 28th, 2026\n\t\t1:00PM",
-      "time": "1:00 PM",
+      "artist": "The Soft Parade:A Tribute to The Doors Jim Morrison Memorial Show",
+      "date": "2001-03-01",
+      "time": "",
       "price": "",
-      "ticketUrl": "https://lpr.com/lpr_events/lhmat26nyc/",
-      "venue": "Le Poisson Rouge",
+      "ticketUrl": "https://www.ticketweb.com/event/the-soft-parade-a-tribute-sony-hall-tickets/14081034?pl=sonyhall&REFID=260703site",
+      "venue": "Sony Hall",
       "source": "scrape",
       "score": 0,
       "matchReason": "No match found",
-      "spotifyArtistId": "2zEGZaYnEVjERT8iFHfArc",
-      "spotifyGenres": []
-    },
-    {
-      "artist": "Labiahead (all women Radiohead)",
-      "date": "Sun June 28th, 2026\n\t\t6:00PM",
-      "time": "6:00 PM",
-      "price": "",
-      "ticketUrl": "https://lpr.com/lpr_events/inrainbows26nyc/",
-      "venue": "Le Poisson Rouge",
-      "source": "scrape",
-      "score": 0,
-      "matchReason": "No match found",
-      "spotifyArtistId": "2zEGZaYnEVjERT8iFHfArc",
+      "spotifyArtistId": "22WZ7M8sxp5THdruNY3gXt",
       "spotifyGenres": []
     },
     {
@@ -1327,6 +1244,123 @@
       "matchReason": "No match found",
       "spotifyArtistId": "0nyc9SZGLITSOJASmTZsnZ",
       "spotifyGenres": []
+    },
+    {
+      "artist": "Jams",
+      "date": "Fri July 10th, 2026\n\t\t11:00PM",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/jams0726nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "7GaxyUddsPok8BuhxN6OUW",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "DayBreak: R&B Party",
+      "date": "Sat July 11th, 2026\n\t\t11:00PM",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/daybreak0726nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "7u6LfVyYpEzMpHLL7jTyvU",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Women That Rock + Ariana And The Rose Present",
+      "date": "Wed July 15th, 2026\n\t\t7:00PM",
+      "time": "7:00 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/revue26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5HgPIUp6b7DVdhWK3tkl83",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Programme 4: Television of Tomorrow",
+      "date": "Thu July 16th, 2026\n\t\t7:00PM",
+      "time": "7:00 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/programme26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": null,
+      "spotifyGenres": []
+    },
+    {
+      "artist": "The Wildwoods",
+      "date": "Fri July 17th, 2026\n\t\t6:30PM",
+      "time": "6:30 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/wildwoods26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "2wPWBhOid8BNr5lgEf8GKe",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Emo Night Brooklyn",
+      "date": "Fri July 17th, 2026\n\t\t11:00PM",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/enb10949/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "57Ssjwp93IK7DekBrNHvtQ",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Matinee Social Club: 90s vs. 00s Decade Battle",
+      "date": "Sat July 18th, 2026\n\t\t5:00PM",
+      "time": "5:00 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/msc718nyc26/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "5eVHl0y98Eobpt1OYsdaqY",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "Mike Nasty Presents: No Filter!",
+      "date": "Sat July 18th, 2026\n\t\t11:00PM",
+      "time": "11:00 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/mn0726nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "37LjJMKJo7uRC6p1QCccib",
+      "spotifyGenres": []
+    },
+    {
+      "artist": "SIAMÉS – BOUNCE INTO THE MUSIC – 10th Anniversary Tour",
+      "date": "Sun July 19th, 2026\n\t\t7:00PM",
+      "time": "7:00 PM",
+      "price": "",
+      "ticketUrl": "https://lpr.com/lpr_events/siames26nyc/",
+      "venue": "Le Poisson Rouge",
+      "source": "scrape",
+      "score": 0,
+      "matchReason": "No match found",
+      "spotifyArtistId": "68NOjWuVYBRXzYwhel3jAl",
+      "spotifyGenres": []
     }
   ],
   "profile": {
@@ -1335,11 +1369,9 @@
         "id": "1WGb8nCPGJA0RyriSDIQfC",
         "name": "Say She She",
         "genres": [
-          "soul",
-          "funk",
-          "disco",
-          "r&b"
+          "retro soul"
         ],
+        "popularity": 45,
         "url": "https://open.spotify.com/artist/1WGb8nCPGJA0RyriSDIQfC",
         "mediumRank": 1,
         "longRank": 4
@@ -1348,12 +1380,10 @@
         "id": "0tbeZu9lv8YEKSQ9tZSslu",
         "name": "Amber Mark",
         "genres": [
-          "r&b",
-          "alternative singer/songwriter",
-          "indie soul",
           "alternative r&b",
-          "left-field pop"
+          "indie soul"
         ],
+        "popularity": 61,
         "url": "https://open.spotify.com/artist/0tbeZu9lv8YEKSQ9tZSslu",
         "mediumRank": 2,
         "longRank": 14
@@ -1361,7 +1391,11 @@
       {
         "id": "4VA3EAvncrTucjTmrvd4GE",
         "name": "LION BABE",
-        "genres": [],
+        "genres": [
+          "alternative r&b",
+          "indie soul"
+        ],
+        "popularity": 44,
         "url": "https://open.spotify.com/artist/4VA3EAvncrTucjTmrvd4GE",
         "mediumRank": 3,
         "longRank": 15
@@ -1372,25 +1406,18 @@
         "genres": [
           "electropop"
         ],
+        "popularity": 52,
         "url": "https://open.spotify.com/artist/1xHQO9GJIW9OXHxGBISYc5",
         "mediumRank": 4,
-        "longRank": 27
+        "longRank": 21
       },
       {
         "id": "3TVXtAsR1Inumwj472S9r4",
         "name": "Drake",
         "genres": [
-          "hip hop",
-          "r&b",
-          "pop rap",
-          "contemporary r&b",
-          "alternative r&b",
-          "trap",
-          "pop",
-          "hip-hop",
-          "trap rap",
           "rap"
         ],
+        "popularity": 100,
         "url": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4",
         "mediumRank": 5,
         "longRank": 13
@@ -1399,25 +1426,20 @@
         "id": "00x1fYSGhdqScXBRpSj3DW",
         "name": "Olivia Dean",
         "genres": [
-          "neo soul",
-          "pop soul",
-          "pop",
-          "indie pop",
-          "2020s",
-          "gen z"
+          "pop soul"
         ],
+        "popularity": 89,
         "url": "https://open.spotify.com/artist/00x1fYSGhdqScXBRpSj3DW",
         "mediumRank": 6,
-        "longRank": 41
+        "longRank": 42
       },
       {
         "id": "7gSjFKpVmDgC2MMsnN8CYq",
         "name": "Jazmine Sullivan",
         "genres": [
-          "contemporary r&b",
-          "hip hop rnb and dance hall",
-          "soul"
+          "r&b"
         ],
+        "popularity": 60,
         "url": "https://open.spotify.com/artist/7gSjFKpVmDgC2MMsnN8CYq",
         "mediumRank": 7,
         "longRank": 34
@@ -1426,6 +1448,7 @@
         "id": "0wjmGEhseCe8DwtSitmUhr",
         "name": "KVS Tabla",
         "genres": [],
+        "popularity": 23,
         "url": "https://open.spotify.com/artist/0wjmGEhseCe8DwtSitmUhr",
         "mediumRank": 8
       },
@@ -1441,6 +1464,7 @@
           "rhythm & blues",
           "country"
         ],
+        "popularity": 84,
         "url": "https://open.spotify.com/artist/33qOK5uJ8AR2xuQQAhHump",
         "mediumRank": 9,
         "longRank": 20
@@ -1449,10 +1473,10 @@
         "id": "3jGVx8ZyTVFWokbgl6BDdo",
         "name": "Mohini Dey",
         "genres": [
-          "jazz",
           "jazz fusion",
-          "jazz rock"
+          "progressive rock"
         ],
+        "popularity": 32,
         "url": "https://open.spotify.com/artist/3jGVx8ZyTVFWokbgl6BDdo",
         "mediumRank": 10
       }
@@ -1460,85 +1484,85 @@
     "topGenres": [
       {
         "genre": "pop",
-        "count": 13
+        "count": 11
+      },
+      {
+        "genre": "alternative r&b",
+        "count": 9
       },
       {
         "genre": "r&b",
         "count": 8
       },
       {
-        "genre": "rock",
+        "genre": "hip hop",
         "count": 8
       },
       {
-        "genre": "hip hop",
+        "genre": "soul",
+        "count": 7
+      },
+      {
+        "genre": "rock",
         "count": 6
       },
       {
-        "genre": "soul",
+        "genre": "indie soul",
         "count": 5
       },
       {
         "genre": "rap",
-        "count": 5
-      },
-      {
-        "genre": "pop soul",
-        "count": 5
-      },
-      {
-        "genre": "alternative r&b",
         "count": 4
       },
       {
-        "genre": "pop rap",
+        "genre": "jazz",
         "count": 4
       },
       {
-        "genre": "contemporary r&b",
+        "genre": "2020s",
         "count": 4
       }
     ],
     "recentArtists": [
       {
-        "id": "1xHQO9GJIW9OXHxGBISYc5",
-        "name": "Marian Hill"
+        "id": "47bVt95bvBMpmJFWoyhH0C",
+        "name": "Xtreme"
       },
       {
-        "id": "3J0BpFVUc9LeOIVeN5uNhU",
-        "name": "Lauren Jauregui"
+        "id": "3MHaV05u0io8fQbZ2XPtlC",
+        "name": "Prince Royce"
       },
       {
-        "id": "2w9zwq3AktTeYYMuhMjju8",
-        "name": "INNA"
+        "id": "5lwmRuXgjX8xIwlnauTZIP",
+        "name": "Romeo Santos"
       },
       {
-        "id": "5PZoEi7wXcmnAuiWnWj4zg",
-        "name": "Goldtooth"
+        "id": "2FjzRd1bgtsmhESettmFAN",
+        "name": "DON WEST"
       },
       {
-        "id": "4bYBSD85t4zLJbphpiOruZ",
-        "name": "Steve Davit"
+        "id": "1uiEZYehlNivdK3iQyAbye",
+        "name": "Tom Misch"
       },
       {
-        "id": "6hfwwpXqZPRC9CsKI7qtv1",
-        "name": "Alina Baraz"
+        "id": "6Gk5hoM7eW8NSCYhICMDHw",
+        "name": "Zak Abel"
       },
       {
-        "id": "6LuN9FCkKOj5PcnpouEgny",
-        "name": "Khalid"
+        "id": "2rp9zfs7yPrwCGVl4CjWAl",
+        "name": "Otis Kane"
       },
       {
-        "id": "0rfUpMmPFYv5s0dF6hyYrx",
-        "name": "Skinny Hightower"
+        "id": "2iAyNq1LgQlXcmtM7SzkdV",
+        "name": "Aaron Childs"
       },
       {
-        "id": "0d1j4VJ7gzAJaDslzmjTF0",
-        "name": "El Ten Eleven"
+        "id": "0bzfPKdbXL5ezYW2z3UGQj",
+        "name": "Michael Kiwanuka"
       },
       {
-        "id": "38C3okxv3fyyOIQUVPCdGX",
-        "name": "Lee Morgan"
+        "id": "7b04D0yLktCUpvxQBhmG7R",
+        "name": "LEISURE"
       }
     ]
   },
